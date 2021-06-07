@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>localstorage与sessionstorage | 鄺.kの博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="遇事不决，可问春风。春风不语，遵循己心">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.095b1aa1.css" as="style"><link rel="preload" href="/assets/js/app.5df4eb50.js" as="script"><link rel="preload" href="/assets/js/3.15797152.js" as="script"><link rel="preload" href="/assets/js/1.06e244cb.js" as="script"><link rel="preload" href="/assets/js/41.87576345.js" as="script"><link rel="prefetch" href="/assets/js/10.591c55d7.js"><link rel="prefetch" href="/assets/js/100.43169891.js"><link rel="prefetch" href="/assets/js/101.4a0a69a9.js"><link rel="prefetch" href="/assets/js/102.a65a2884.js"><link rel="prefetch" href="/assets/js/103.57922ac5.js"><link rel="prefetch" href="/assets/js/104.4c19aaf2.js"><link rel="prefetch" href="/assets/js/105.68564040.js"><link rel="prefetch" href="/assets/js/106.530cf096.js"><link rel="prefetch" href="/assets/js/107.5d3b98b4.js"><link rel="prefetch" href="/assets/js/108.28d0a7b9.js"><link rel="prefetch" href="/assets/js/109.6d64983e.js"><link rel="prefetch" href="/assets/js/11.709c1358.js"><link rel="prefetch" href="/assets/js/110.a4d0e266.js"><link rel="prefetch" href="/assets/js/111.d0996591.js"><link rel="prefetch" href="/assets/js/112.c4456c4e.js"><link rel="prefetch" href="/assets/js/113.2f9086e0.js"><link rel="prefetch" href="/assets/js/114.34a0f2d1.js"><link rel="prefetch" href="/assets/js/115.55b6bd40.js"><link rel="prefetch" href="/assets/js/116.c399694f.js"><link rel="prefetch" href="/assets/js/117.358b8a6b.js"><link rel="prefetch" href="/assets/js/118.2b5e450f.js"><link rel="prefetch" href="/assets/js/119.b0ea0739.js"><link rel="prefetch" href="/assets/js/12.d34481b5.js"><link rel="prefetch" href="/assets/js/120.02957164.js"><link rel="prefetch" href="/assets/js/121.047c3237.js"><link rel="prefetch" href="/assets/js/122.ea42b24f.js"><link rel="prefetch" href="/assets/js/123.d47cde08.js"><link rel="prefetch" href="/assets/js/124.3b4f7411.js"><link rel="prefetch" href="/assets/js/125.def10d4f.js"><link rel="prefetch" href="/assets/js/126.b0c139f8.js"><link rel="prefetch" href="/assets/js/127.5ea771f5.js"><link rel="prefetch" href="/assets/js/128.571d10c5.js"><link rel="prefetch" href="/assets/js/129.47ca4fa3.js"><link rel="prefetch" href="/assets/js/13.9be62f33.js"><link rel="prefetch" href="/assets/js/130.38508d86.js"><link rel="prefetch" href="/assets/js/14.041ed4bc.js"><link rel="prefetch" href="/assets/js/15.4cbfab79.js"><link rel="prefetch" href="/assets/js/16.d580ddff.js"><link rel="prefetch" href="/assets/js/17.c52346dc.js"><link rel="prefetch" href="/assets/js/18.a8e74f9b.js"><link rel="prefetch" href="/assets/js/19.19dcbcf8.js"><link rel="prefetch" href="/assets/js/20.2b097e8c.js"><link rel="prefetch" href="/assets/js/21.2e3019bf.js"><link rel="prefetch" href="/assets/js/22.2bcf9d3b.js"><link rel="prefetch" href="/assets/js/23.79ecf207.js"><link rel="prefetch" href="/assets/js/24.2f614784.js"><link rel="prefetch" href="/assets/js/25.b17f23a9.js"><link rel="prefetch" href="/assets/js/26.4393bab0.js"><link rel="prefetch" href="/assets/js/27.4e3605da.js"><link rel="prefetch" href="/assets/js/28.f5085f32.js"><link rel="prefetch" href="/assets/js/29.85f40562.js"><link rel="prefetch" href="/assets/js/30.38a4057f.js"><link rel="prefetch" href="/assets/js/31.52e017ca.js"><link rel="prefetch" href="/assets/js/32.f93bc287.js"><link rel="prefetch" href="/assets/js/33.e9c68e7a.js"><link rel="prefetch" href="/assets/js/34.ec8eeb75.js"><link rel="prefetch" href="/assets/js/35.84d25e42.js"><link rel="prefetch" href="/assets/js/36.c84bbef5.js"><link rel="prefetch" href="/assets/js/37.aded605e.js"><link rel="prefetch" href="/assets/js/38.68856c82.js"><link rel="prefetch" href="/assets/js/39.1ed162e6.js"><link rel="prefetch" href="/assets/js/4.95d80005.js"><link rel="prefetch" href="/assets/js/40.af030705.js"><link rel="prefetch" href="/assets/js/42.14af7b33.js"><link rel="prefetch" href="/assets/js/43.adc16fe9.js"><link rel="prefetch" href="/assets/js/44.9a6fe7b0.js"><link rel="prefetch" href="/assets/js/45.21b43a08.js"><link rel="prefetch" href="/assets/js/46.7f36644e.js"><link rel="prefetch" href="/assets/js/47.eba8c703.js"><link rel="prefetch" href="/assets/js/48.47d99fe1.js"><link rel="prefetch" href="/assets/js/49.3ecb92b6.js"><link rel="prefetch" href="/assets/js/5.fd26561e.js"><link rel="prefetch" href="/assets/js/50.5c7b8483.js"><link rel="prefetch" href="/assets/js/51.f7126bbe.js"><link rel="prefetch" href="/assets/js/52.f0d8d96d.js"><link rel="prefetch" href="/assets/js/53.cd2d55b4.js"><link rel="prefetch" href="/assets/js/54.af51ca2e.js"><link rel="prefetch" href="/assets/js/55.605c94a0.js"><link rel="prefetch" href="/assets/js/56.89f90357.js"><link rel="prefetch" href="/assets/js/57.b58d3ca7.js"><link rel="prefetch" href="/assets/js/58.e264e606.js"><link rel="prefetch" href="/assets/js/59.bb778e8c.js"><link rel="prefetch" href="/assets/js/6.25df8b22.js"><link rel="prefetch" href="/assets/js/60.84972cf0.js"><link rel="prefetch" href="/assets/js/61.6f834c11.js"><link rel="prefetch" href="/assets/js/62.21cc92d2.js"><link rel="prefetch" href="/assets/js/63.3aba2312.js"><link rel="prefetch" href="/assets/js/64.650f2cbb.js"><link rel="prefetch" href="/assets/js/65.ecab0d5f.js"><link rel="prefetch" href="/assets/js/66.ba49376c.js"><link rel="prefetch" href="/assets/js/67.eed9af63.js"><link rel="prefetch" href="/assets/js/68.185d281a.js"><link rel="prefetch" href="/assets/js/69.b46b4b46.js"><link rel="prefetch" href="/assets/js/7.8d446f1b.js"><link rel="prefetch" href="/assets/js/70.8c33bfa5.js"><link rel="prefetch" href="/assets/js/71.22f91afd.js"><link rel="prefetch" href="/assets/js/72.0c4f6101.js"><link rel="prefetch" href="/assets/js/73.66593ad1.js"><link rel="prefetch" href="/assets/js/74.e0c81322.js"><link rel="prefetch" href="/assets/js/75.0e0e45fc.js"><link rel="prefetch" href="/assets/js/76.deaba6ff.js"><link rel="prefetch" href="/assets/js/77.b4cbf344.js"><link rel="prefetch" href="/assets/js/78.0738853d.js"><link rel="prefetch" href="/assets/js/79.fc35e495.js"><link rel="prefetch" href="/assets/js/8.b32112cb.js"><link rel="prefetch" href="/assets/js/80.32e5f1fd.js"><link rel="prefetch" href="/assets/js/81.9299ce8f.js"><link rel="prefetch" href="/assets/js/82.d9e93eca.js"><link rel="prefetch" href="/assets/js/83.c71b35d4.js"><link rel="prefetch" href="/assets/js/84.3c393e32.js"><link rel="prefetch" href="/assets/js/85.81148ad7.js"><link rel="prefetch" href="/assets/js/86.86cbcc40.js"><link rel="prefetch" href="/assets/js/87.eb6db0a1.js"><link rel="prefetch" href="/assets/js/88.3936ce96.js"><link rel="prefetch" href="/assets/js/89.0835b3b3.js"><link rel="prefetch" href="/assets/js/9.92d0b38a.js"><link rel="prefetch" href="/assets/js/90.3007a879.js"><link rel="prefetch" href="/assets/js/91.4ecf19f9.js"><link rel="prefetch" href="/assets/js/92.8982eb58.js"><link rel="prefetch" href="/assets/js/93.945019dc.js"><link rel="prefetch" href="/assets/js/94.1f60e1c9.js"><link rel="prefetch" href="/assets/js/95.6fa3c63b.js"><link rel="prefetch" href="/assets/js/96.d58fee06.js"><link rel="prefetch" href="/assets/js/97.1366fd4f.js"><link rel="prefetch" href="/assets/js/98.c75e6442.js"><link rel="prefetch" href="/assets/js/99.dc8963c8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.095b1aa1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>鄺.kの博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>遇事不决，可问春风。春风不语，遵循己心</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.gif" alt="鄺.kの博客" class="logo"> <span class="site-name">鄺.kの博客</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.gif" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    鄺.k
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>120</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>20</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blogs/jsmd/082501.html" class="sidebar-link">js简介组成</a></li><li><a href="/blogs/jsmd/082502.html" class="sidebar-link">关系运算符和关系表达式</a></li><li><a href="/blogs/jsmd/082503.html" class="sidebar-link">代码调试介绍 数组 循环结构</a></li><li><a href="/blogs/jsmd/082601.html" class="sidebar-link">函数</a></li><li><a href="/blogs/jsmd/082602.html" class="sidebar-link">高阶函数</a></li><li><a href="/blogs/jsmd/082701.html" class="sidebar-link">内置对象的API</a></li><li><a href="/blogs/jsmd/082702.html" class="sidebar-link">WebApi</a></li><li><a href="/blogs/jsmd/082801.html" class="sidebar-link">排他思想</a></li><li><a href="/blogs/jsmd/082802.html" class="sidebar-link">DOM节点</a></li><li><a href="/blogs/jsmd/082803.html" aria-current="page" class="active sidebar-link">localstorage与sessionstorage</a></li><li><a href="/blogs/jsmd/082901.html" class="sidebar-link">getComputedStyle()获取元素一切样式属性</a></li><li><a href="/blogs/jsmd/083001.html" class="sidebar-link">动画经典案例</a></li><li><a href="/blogs/jsmd/083101.html" class="sidebar-link">拖拽盒子</a></li><li><a href="/blogs/jsmd/090101.html" class="sidebar-link">分支结构</a></li><li><a href="/blogs/jsmd/090102.html" class="sidebar-link">定义函数三种方式</a></li><li><a href="/blogs/jsmd/090103.html" class="sidebar-link">箭头函数</a></li><li><a href="/blogs/jsmd/090201.html" class="sidebar-link">es5原型链的继承</a></li><li><a href="/blogs/jsmd/090301.html" class="sidebar-link">jQuery介绍</a></li><li><a href="/blogs/jsmd/090401.html" class="sidebar-link">jQuery事件</a></li><li><a href="/blogs/jsmd/090501.html" class="sidebar-link">数据可视化</a></li><li><a href="/blogs/jsmd/090504.html" class="sidebar-link">数据可视化 项目</a></li><li><a href="/blogs/jsmd/090601.html" class="sidebar-link">实用网站</a></li><li><a href="/blogs/jsmd/090701.html" class="sidebar-link">客户端与服务器基本概念</a></li><li><a href="/blogs/jsmd/090801.html" class="sidebar-link">Ajax基本概念</a></li><li><a href="/blogs/jsmd/090802.html" class="sidebar-link">jQuery中Ajax方法请求服务</a></li><li><a href="/blogs/jsmd/090803.html" class="sidebar-link">formData对象</a></li><li><a href="/blogs/jsmd/091001.html" class="sidebar-link">XMLHttpRequest对象</a></li><li><a href="/blogs/jsmd/091002.html" class="sidebar-link">URL 编码 解码</a></li><li><a href="/blogs/jsmd/091003.html" class="sidebar-link">form表单重置</a></li><li><a href="/blogs/jsmd/091101.html" class="sidebar-link">jQuery文件上传进度功能</a></li><li><a href="/blogs/jsmd/091102.html" class="sidebar-link">HTTP协议</a></li><li><a href="/blogs/jsmd/091103.html" class="sidebar-link">同源策略</a></li><li><a href="/blogs/jsmd/091201.html" class="sidebar-link">防抖 节流</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>localstorage与sessionstorage</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">localstorage与sessionstorage</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>鄺.k</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2020/8/28</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>javascript</span></i></div></div> <div class="theme-reco-content content__default"><div class="custom-block tip"><p class="title">介绍</p><p>localstorage与sessionstorage <br>
+offset家族 <br>
+定时器作用及语法<br></p></div> <h2 id="_01-localstorage与sessionstorage"><a href="#_01-localstorage与sessionstorage" class="header-anchor">#</a> 01-localstorage与sessionstorage</h2> <p><strong>1.1-localstorage</strong></p> <p>1.localStorage:本地存储</p> <p>将数据存储到浏览器</p> <p>2.语法</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>存：  localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">,</span><span class="token string">'属性值'</span><span class="token punctuation">)</span>
+
+取：  localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">)</span>
+
+删：  localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'属性名'</span><span class="token punctuation">)</span>
+
+清空： localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>3.注意点</p> <p>a.存储的数据只能是字符串类型。如果是其他数据类型则会自动调用toString()方法转成字符串
+b**.永久存储**。除非自己删，否则一直存在于浏览器
+c.复合数据类型 使用JSON.stringify()转换成json字符串进行存储</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn1&quot;</span><span class="token operator">&gt;</span>存储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn2&quot;</span><span class="token operator">&gt;</span>取储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn3&quot;</span><span class="token operator">&gt;</span>删储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn4&quot;</span><span class="token operator">&gt;</span>清空储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/* 
+            1.localStorage:本地存储
+                将数据存储到浏览器
+
+            2.语法
+                存：  localStorage.setItem('属性名','属性值')
+                取：  localStorage.getItem('属性名')
+                删：  localStorage.removeItem('属性名')
+                清空： localStorage.clear()
+
+            3.注意点
+                a.存储的数据只能是字符串类型。如果是其他数据类型则会自动调用toString()方法转成字符串
+                b.永久存储。除非自己删，否则一直存在于浏览器
+         */</span>
+
+
+        <span class="token comment">//存</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'班长'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'girlFriend'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'小白'</span><span class="token punctuation">,</span><span class="token string">'小红'</span><span class="token punctuation">,</span><span class="token string">'小黑'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//取</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">let</span> age <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//删</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'girlFriend'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//清空:一次性删除所有数据</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br></div></div><p><strong>1.2-sessionStorage</strong></p> <p>1.sessionStorage相当于短命版的localStorage，其他用法完全一致</p> <p>2.两者区别：HP值不同</p> <p>localStorage：永久存储（存在硬盘，HP值无限）</p> <p>sessionStorage：临时存储（存在内存，HP值一条命，<strong>只要浏览器关闭就没有了</strong>）</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn1&quot;</span><span class="token operator">&gt;</span>存储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn2&quot;</span><span class="token operator">&gt;</span>取储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn3&quot;</span><span class="token operator">&gt;</span>删储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;btn4&quot;</span><span class="token operator">&gt;</span>清空储据<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/* 
+            1.sessionStorage相当于短命版的localStorage，其他用法完全一致
+
+            2.两者区别：HP值不同
+                localStorage：永久存储（存在硬盘，HP值无限）
+                sessionStorage：临时存储（存在内存，HP值一条命，只要浏览器关闭就没有了）
+
+         */</span>
+
+
+        <span class="token comment">//存</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'班长'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'girlFriend'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">'小黑'</span><span class="token punctuation">,</span><span class="token string">'小红'</span><span class="token punctuation">,</span><span class="token string">'小白'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//取</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn2'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">let</span> age <span class="token operator">=</span> sessionStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//删</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            sessionStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'girlFriend'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">//清空:一次性删除所有数据</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn4'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            sessionStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><h2 id="_02-offset家族"><a href="#_02-offset家族" class="header-anchor">#</a> 02-offset家族</h2> <ul><li>1.offset属性家族：<strong>获取元素真实的宽高和位置</strong> <ul><li>offsetWidth</li> <li>offsetHeight</li> <li>offsetParent</li> <li>offsetLeft</li> <li>offsetTop</li></ul></li> <li>2.之前学习的通过<strong>style</strong>属性获取宽高的特点
+<ul><li>1.只能获取行内的宽高</li> <li>2.获取到的值是一个string类型，并且带px</li> <li>3.获取到的只有宽高，不包含padding、border（总结就是行内写的是什么，获取的就是什么）</li> <li>4.既可以读取，也可以设置</li></ul></li> <li>3.offsetWidth与offsetHeight：获取的是元素的实际宽高 = width + border + padding
+<ul><li>1.可以获取行内及内嵌的宽高(全局的属性)</li> <li>2.获取到的值是一个number类型，<strong>不带单位</strong></li> <li>3.获取的宽高包含border和padding</li> <li>4.<strong>只能读取，不能设置</strong></li></ul></li></ul> <p><strong>1.1-offsetWidth与offsetHeight</strong></p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>one<span class="token punctuation">{</span>
+            width<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            padding<span class="token operator">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+            border<span class="token operator">:</span> <span class="token number">10</span>px solid red<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> style<span class="token operator">=</span><span class="token string">&quot;height: 150px; background: pink; &quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*offset属性家族：获取元素真实的宽高和位置
+        * offsetWidth、offsetHeight、offsetParent、offsetLeft、offsetTop
+     */</span>
+
+    <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/*之前学习的通过style属性获取宽高的特点
+    * 1.只能获取行内的宽高
+    * 2.获取到的值是一个string类型，并且带px
+    * 3.获取到的只有宽高，不包含padding、border（总结就是行内写的是什么，获取的就是什么）
+    * 4.既可以读取，也可以设置
+     */</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token string">'100px'</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*offsetEWidth与offsetHeight：获取的是元素的实际宽高 = width + border + padding
+    1.可以获取行内及内嵌的宽高
+    2.获取到的值是一个number类型，不带单位
+    3.获取的宽高包含border和padding
+    4.只能读取，不能设置
+     */</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>offsetWidth <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//width + border + padding</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>offsetHeight <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//height + border + padding</span>
+
+    box<span class="token punctuation">.</span>offsetWidth <span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">;</span>					<span class="token comment">//手动设置无效：只能读取，不能设置。</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div><p><strong>1.2-offsetParent</strong></p> <p>offsetParent:获取最近的定位父元素 （自己定位参照的父元素）
+注意点：
+1.如果元素自身是固定定位（fixed），则定位父级是null
+2.如果元素自身是非固定定位,并且所有的父元素都没有定位，那么他的定位父级是body
+3.body的定位父级是null</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>one<span class="token punctuation">{</span>
+              top<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+              left<span class="token operator">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+              width<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+              height<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+              background<span class="token operator">:</span> greenyellow<span class="token punctuation">;</span>
+              position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+        <span class="token punctuation">.</span>two<span class="token punctuation">{</span>
+            top<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            left<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            width<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">:</span> cyan<span class="token punctuation">;</span>
+            position<span class="token operator">:</span> relative<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token punctuation">.</span>three<span class="token punctuation">{</span>
+            top<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            left<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            width<span class="token operator">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">:</span> green<span class="token punctuation">;</span>
+            position<span class="token operator">:</span> relative<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;three&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;two&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*offsetParent:获取最近的定位父元素  （自己定位参照的父元素）
+    //注意点：
+    1.如果元素自身是固定定位，则定位父级是null
+    2.如果元素自身是非固定定位,并且所有的父元素都没有定位，那么他的定位父级是body
+    3.body的定位父级是null
+
+     */</span>
+
+    <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>offsetParent <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">//如果是固定定位fixed，则父元素是null</span>
+    <span class="token comment">//原因：固定定位参照的是浏览器窗口，这不属于任何一个元素，所以是null</span>
+   <span class="token comment">// console.log ( box.offsetParent );//null</span>
+
+    <span class="token comment">//body自身的定位父元素是null</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>offsetParent <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br></div></div><p><strong>1.3-offsetLeft和offsetTop</strong></p> <ul><li>offsetLeft:获取自己左外边框与offsetParent的左内边框的距离</li> <li>offsetTop:获取自己上外边框与offsetParent的上内边框的距离</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>one<span class="token punctuation">{</span>
+            top<span class="token operator">:</span><span class="token number">50</span>px<span class="token punctuation">;</span>
+            left<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+            width<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">:</span> greenyellow<span class="token punctuation">;</span>
+            border<span class="token operator">:</span> <span class="token number">10</span>px solid red<span class="token punctuation">;</span>
+            margin<span class="token operator">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+            position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token punctuation">.</span>two<span class="token punctuation">{</span>
+            top<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            left<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            width<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">:</span> cyan<span class="token punctuation">;</span>
+            border<span class="token operator">:</span> <span class="token number">20</span>px solid purple<span class="token punctuation">;</span>
+            padding<span class="token operator">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+            position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;two&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*
+    	offsetLeft:获取自己左外边框与offsetParent的左内边框的距离
+    	offsetTop:获取自己上外边框与offsetParent的上内边框的距离
+     */</span>
+
+    <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>offsetLeft <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//70</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> box<span class="token punctuation">.</span>offsetTop <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//70</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><h2 id="_03-定时器作用及语法"><a href="#_03-定时器作用及语法" class="header-anchor">#</a> 03-定时器作用及语法</h2> <p><strong>1.1-setInterval</strong></p> <p>定时器：某一件事（一段代码）并不是马上执行，而是隔一段时间执行</p> <ul><li>setInterval:创建定时器
+<ul><li>特点：一旦创建立即计时，必须要手动停止，否则会无限的每隔一段时间执行代码</li></ul></li> <li>clearInterval(定时器id)：清除定时器
+<ul><li>一个页面可以创建很多个定时器，通过制定定时器id可以清除特定的定时器</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;start&quot;</span><span class="token operator">&gt;</span>开启<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;end&quot;</span><span class="token operator">&gt;</span>结束<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p id<span class="token operator">=</span><span class="token string">&quot;p1&quot;</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/*1.定时器: 让一段代码每隔一定时间自动执行
+          2.语法
+            开启定时器：  setInterval()    一旦开启永久重复，只能手动调用语法停止
+            清除定时器    clearInterval()
+          */</span>
+        <span class="token keyword">let</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#p1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">let</span> timeID <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//声明变量存储定时器</span>
+        <span class="token comment">//注册事件</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'start'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">/**开启定时器
+            第一个参数：一段代码  回调函数
+            第二个参数：时间间隔 单位：ms
+            返回值： 定时器ID timeID
+                定时器ID：一个页面可以开启很多个不同的定时器，浏览器为了区分这些定时器，每开启一个定时器
+                就会给它们一个编号，这个编号叫做定时器ID
+            */</span>
+            timeID <span class="token operator">=</span>  <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'哈哈哈'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                p1<span class="token punctuation">.</span>innerText<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token comment">// let text = p1.innerText;</span>
+                <span class="token comment">// text++;//只是变量text的值+1</span>
+                <span class="token comment">// console.log(text);</span>
+                <span class="token comment">// p1.innerText = text;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//清除定时器</span>
+            <span class="token comment">//参数：定时器ID</span>
+            <span class="token function">clearInterval</span><span class="token punctuation">(</span>timeID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+       
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><p><strong>1.2-setTimeout</strong></p> <ul><li>定时器setTimeout与setInterval唯一的区别是，setTimeout定时器只会执行一次</li> <li>总结：
+<ul><li>1.如果你想让这个代码一段时间后只执行一次，使用setTimeout</li> <li>2.如果你想让这个代码每隔一段时间执行一次（执行多次），使用setInterval</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/* 1. setInterval() :永久定时器   一旦开启会永久重复， 只能手动清除
+                clearInterval() :清除
+
+            2. setTimeout() : 一次定时器   一旦开启只会执行一次，执行完毕之后自动清除
+        
+         */</span>
+        
+        <span class="token keyword">let</span> timeID <span class="token operator">=</span>  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+             <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'boom'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+         <span class="token comment">//一次定时器也可以清除，但是不常用</span>
+        <span class="token comment">//  clearInterval(timeID);</span>
+        <span class="token comment">// clearTimeout(timeID);</span>
+    
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="_04-定时器的场景案例"><a href="#_04-定时器的场景案例" class="header-anchor">#</a> 04-定时器的场景案例</h2> <p><strong>==1.1-倒计时秒杀==</strong></p> <ul><li><p>思路分析</p> <p>开启定时器，1s
+1.先获取页面元素的文本   h m s
+2.每过1s，s--
+3.如果s &lt; 0, s = 59, m--
+4.如果m &lt; 0, m = 59, h--
+5.如果 h m s &lt; 10,则在前面加上0
+6.将计算的h m s 结果，显示到页面元素中
+7.如果h == 0 &amp;&amp; m == 0 &amp;&amp; s == 0</p></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>box <span class="token punctuation">{</span>
+            width<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            margin<span class="token operator">:</span> <span class="token number">100</span>px auto<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        span <span class="token punctuation">{</span>
+            display<span class="token operator">:</span> inline<span class="token operator">-</span>block<span class="token punctuation">;</span>
+            width<span class="token operator">:</span> <span class="token number">30</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+            line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">-</span>color<span class="token operator">:</span> #<span class="token number">222</span><span class="token punctuation">;</span>
+            color<span class="token operator">:</span> #fff<span class="token punctuation">;</span>
+            text<span class="token operator">-</span>align<span class="token operator">:</span> center<span class="token punctuation">;</span>
+            font<span class="token operator">-</span>weight<span class="token operator">:</span> <span class="token number">700</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">&quot;spanHour&quot;</span><span class="token operator">&gt;</span><span class="token number">03</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">&quot;spanMin&quot;</span><span class="token operator">&gt;</span><span class="token number">06</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">&quot;spanSec&quot;</span><span class="token operator">&gt;</span><span class="token number">15</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*思路分析 
+      开启一个永久定时器。时间间隔1s。
+      (1).获取页面元素的文本。 h m s
+      (2).每过1s， s--
+      (3). 如果s &lt; 0, s = 59,m--
+      (4) 如果 m &lt; 0, m = 59,h--
+      (5)如果hms &lt; 10，则在前面加上0  
+      (5)将计算好的时分秒hms赋值给页面元素文本
+      (6)如果 s == 0 &amp;&amp; m == 0 &amp;&amp; h == 0,清除定时器
+    */</span>
+
+    <span class="token keyword">let</span> timeID <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//(1).获取页面元素的文本。 h m s</span>
+      <span class="token keyword">let</span> hDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#spanHour'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> mDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#spanMin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> sDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#spanSec'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> h <span class="token operator">=</span> hDiv<span class="token punctuation">.</span>innerText<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> m <span class="token operator">=</span> mDiv<span class="token punctuation">.</span>innerText<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> s <span class="token operator">=</span> sDiv<span class="token punctuation">.</span>innerText<span class="token punctuation">;</span>
+      <span class="token comment">//(2).每过1s， s--</span>
+      s<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token comment">//(3). 如果s &lt; 0, s = 59,m--</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        s <span class="token operator">=</span> <span class="token number">59</span><span class="token punctuation">;</span>
+        m<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token comment">//(4) 如果 m &lt; 0, m = 59,h--</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        m <span class="token operator">=</span> <span class="token number">59</span><span class="token punctuation">;</span>
+        h<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//(5)如果h m s &lt; 10，则在前面加上0 </span>
+      <span class="token comment">/*注意点： 不要直接用字符串和数字计算，应该先转成number类型 */</span>
+      s <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      m <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      h <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>h<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      s <span class="token operator">=</span> s <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> s <span class="token operator">:</span> s<span class="token punctuation">;</span>
+      m <span class="token operator">=</span> m <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> m <span class="token operator">:</span> m<span class="token punctuation">;</span>
+      h <span class="token operator">=</span> h <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">+</span> h <span class="token operator">:</span> h<span class="token punctuation">;</span>
+      <span class="token comment">//(6)将计算好的时分秒hms赋值给页面元素文本</span>
+      hDiv<span class="token punctuation">.</span>innerText <span class="token operator">=</span> h<span class="token punctuation">;</span>
+      mDiv<span class="token punctuation">.</span>innerText <span class="token operator">=</span> m<span class="token punctuation">;</span>
+      sDiv<span class="token punctuation">.</span>innerText <span class="token operator">=</span> s<span class="token punctuation">;</span>
+      <span class="token comment">//(7)如果 s == 0 &amp;&amp; m == 0 &amp;&amp; h == 0,清除定时器</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> m <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> h <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">clearInterval</span><span class="token punctuation">(</span>timeID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br></div></div><p><strong>1.2-动画介绍（匀速动画）</strong></p> <p>需求：</p> <ul><li>点击开始按钮，让div向右移动800px ，动画效果</li> <li>动画可以理解为物理中的运动，运动三要素：v = s/t （速度 = 距离/时间）</li> <li>如果没有时间因素，则会造成瞬移效果</li> <li>1.如果直接修改div的left值就会瞬间移动，没有动画效果</li> <li>2.动画效果：让div的left值每隔一段时间向右移动一点，直到移动800为止</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>
+<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>`typescript
+   <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>head lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>标题<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+            <span class="token punctuation">.</span>one <span class="token punctuation">{</span>
+                width<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                height<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+                background<span class="token operator">-</span>color<span class="token operator">:</span> pink<span class="token punctuation">;</span>
+                position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+                top<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+                left<span class="token operator">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;开始&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;start&quot;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/*需求：点击开始按钮，让div向右移动800px ，动画效果
+    
+        动画可以理解为物理中的运动，运动三要素：v = s/t  （速度 = 距离/时间）
+            * 如果没有时间因素，则会造成瞬移效果
+            *
+        1.如果直接修改div的left值就会瞬间移动，没有动画效果
+        2.动画效果：让div的left值每隔一段时间向右移动一点，直到移动800为止
+        * */</span>
+    
+        <span class="token comment">//1.获取div</span>
+        <span class="token keyword">let</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token comment">// //直接修改div的left值就会瞬间移动，没有动画</span>
+        <span class="token comment">// document.getElementById('start').onclick = function (  ) {</span>
+        <span class="token comment">//     div.style.left = '800px';</span>
+        <span class="token comment">// }</span>
+    
+        <span class="token comment">//2.利用定时器实现动画（setInterval）</span>
+        <span class="token keyword">let</span> timeID <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//声明一个变量，用来记录定时器的id</span>
+        <span class="token keyword">let</span> currentLeft <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span><span class="token comment">//声明一个变量，用来记录运动中当前的left值</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'start'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            timeID <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//定义一个距离因子来表示速度，每隔一段时间，当前距离会叠加这个因子</span>
+                <span class="token comment">//因子越小，动画越平缓</span>
+                <span class="token keyword">let</span> step <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+                currentLeft <span class="token operator">+=</span> step<span class="token punctuation">;</span>
+                div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> currentLeft <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>
+    
+                <span class="token comment">//判断div是否达到目的地，否则会无限向右移动</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>currentLeft <span class="token operator">&gt;=</span> <span class="token number">800</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    div<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token number">800</span> <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>	<span class="token comment">//到达终点</span>
+                    <span class="token function">clearInterval</span><span class="token punctuation">(</span>timeID<span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//清除定时器，停止运动</span>
+                <span class="token punctuation">}</span>
+    
+            <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//间隔时间越小动画越平缓</span>
+        <span class="token punctuation">}</span>
+    
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>    
+
+
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blogs/jsmd/082802.html" class="prev">
+            DOM节点
+          </a></span> <span class="next"><a href="/blogs/jsmd/082901.html">
+            getComputedStyle()获取元素一切样式属性
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082803.html#_01-localstorage与sessionstorage" class="sidebar-link reco-side-_01-localstorage与sessionstorage" data-v-70334359>01-localstorage与sessionstorage</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082803.html#_02-offset家族" class="sidebar-link reco-side-_02-offset家族" data-v-70334359>02-offset家族</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082803.html#_03-定时器作用及语法" class="sidebar-link reco-side-_03-定时器作用及语法" data-v-70334359>03-定时器作用及语法</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082803.html#_04-定时器的场景案例" class="sidebar-link reco-side-_04-定时器的场景案例" data-v-70334359>04-定时器的场景案例</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div></div><canvas id="Ribbon"></canvas><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.5df4eb50.js" defer></script><script src="/assets/js/3.15797152.js" defer></script><script src="/assets/js/1.06e244cb.js" defer></script><script src="/assets/js/41.87576345.js" defer></script>
+  </body>
+</html>

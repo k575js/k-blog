@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关系运算符和关系表达式 | 鄺.kの博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="遇事不决，可问春风。春风不语，遵循己心">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.095b1aa1.css" as="style"><link rel="preload" href="/assets/js/app.5df4eb50.js" as="script"><link rel="preload" href="/assets/js/3.15797152.js" as="script"><link rel="preload" href="/assets/js/1.06e244cb.js" as="script"><link rel="preload" href="/assets/js/33.e9c68e7a.js" as="script"><link rel="prefetch" href="/assets/js/10.591c55d7.js"><link rel="prefetch" href="/assets/js/100.43169891.js"><link rel="prefetch" href="/assets/js/101.4a0a69a9.js"><link rel="prefetch" href="/assets/js/102.a65a2884.js"><link rel="prefetch" href="/assets/js/103.57922ac5.js"><link rel="prefetch" href="/assets/js/104.4c19aaf2.js"><link rel="prefetch" href="/assets/js/105.68564040.js"><link rel="prefetch" href="/assets/js/106.530cf096.js"><link rel="prefetch" href="/assets/js/107.5d3b98b4.js"><link rel="prefetch" href="/assets/js/108.28d0a7b9.js"><link rel="prefetch" href="/assets/js/109.6d64983e.js"><link rel="prefetch" href="/assets/js/11.709c1358.js"><link rel="prefetch" href="/assets/js/110.a4d0e266.js"><link rel="prefetch" href="/assets/js/111.d0996591.js"><link rel="prefetch" href="/assets/js/112.c4456c4e.js"><link rel="prefetch" href="/assets/js/113.2f9086e0.js"><link rel="prefetch" href="/assets/js/114.34a0f2d1.js"><link rel="prefetch" href="/assets/js/115.55b6bd40.js"><link rel="prefetch" href="/assets/js/116.c399694f.js"><link rel="prefetch" href="/assets/js/117.358b8a6b.js"><link rel="prefetch" href="/assets/js/118.2b5e450f.js"><link rel="prefetch" href="/assets/js/119.b0ea0739.js"><link rel="prefetch" href="/assets/js/12.d34481b5.js"><link rel="prefetch" href="/assets/js/120.02957164.js"><link rel="prefetch" href="/assets/js/121.047c3237.js"><link rel="prefetch" href="/assets/js/122.ea42b24f.js"><link rel="prefetch" href="/assets/js/123.d47cde08.js"><link rel="prefetch" href="/assets/js/124.3b4f7411.js"><link rel="prefetch" href="/assets/js/125.def10d4f.js"><link rel="prefetch" href="/assets/js/126.b0c139f8.js"><link rel="prefetch" href="/assets/js/127.5ea771f5.js"><link rel="prefetch" href="/assets/js/128.571d10c5.js"><link rel="prefetch" href="/assets/js/129.47ca4fa3.js"><link rel="prefetch" href="/assets/js/13.9be62f33.js"><link rel="prefetch" href="/assets/js/130.38508d86.js"><link rel="prefetch" href="/assets/js/14.041ed4bc.js"><link rel="prefetch" href="/assets/js/15.4cbfab79.js"><link rel="prefetch" href="/assets/js/16.d580ddff.js"><link rel="prefetch" href="/assets/js/17.c52346dc.js"><link rel="prefetch" href="/assets/js/18.a8e74f9b.js"><link rel="prefetch" href="/assets/js/19.19dcbcf8.js"><link rel="prefetch" href="/assets/js/20.2b097e8c.js"><link rel="prefetch" href="/assets/js/21.2e3019bf.js"><link rel="prefetch" href="/assets/js/22.2bcf9d3b.js"><link rel="prefetch" href="/assets/js/23.79ecf207.js"><link rel="prefetch" href="/assets/js/24.2f614784.js"><link rel="prefetch" href="/assets/js/25.b17f23a9.js"><link rel="prefetch" href="/assets/js/26.4393bab0.js"><link rel="prefetch" href="/assets/js/27.4e3605da.js"><link rel="prefetch" href="/assets/js/28.f5085f32.js"><link rel="prefetch" href="/assets/js/29.85f40562.js"><link rel="prefetch" href="/assets/js/30.38a4057f.js"><link rel="prefetch" href="/assets/js/31.52e017ca.js"><link rel="prefetch" href="/assets/js/32.f93bc287.js"><link rel="prefetch" href="/assets/js/34.ec8eeb75.js"><link rel="prefetch" href="/assets/js/35.84d25e42.js"><link rel="prefetch" href="/assets/js/36.c84bbef5.js"><link rel="prefetch" href="/assets/js/37.aded605e.js"><link rel="prefetch" href="/assets/js/38.68856c82.js"><link rel="prefetch" href="/assets/js/39.1ed162e6.js"><link rel="prefetch" href="/assets/js/4.95d80005.js"><link rel="prefetch" href="/assets/js/40.af030705.js"><link rel="prefetch" href="/assets/js/41.87576345.js"><link rel="prefetch" href="/assets/js/42.14af7b33.js"><link rel="prefetch" href="/assets/js/43.adc16fe9.js"><link rel="prefetch" href="/assets/js/44.9a6fe7b0.js"><link rel="prefetch" href="/assets/js/45.21b43a08.js"><link rel="prefetch" href="/assets/js/46.7f36644e.js"><link rel="prefetch" href="/assets/js/47.eba8c703.js"><link rel="prefetch" href="/assets/js/48.47d99fe1.js"><link rel="prefetch" href="/assets/js/49.3ecb92b6.js"><link rel="prefetch" href="/assets/js/5.fd26561e.js"><link rel="prefetch" href="/assets/js/50.5c7b8483.js"><link rel="prefetch" href="/assets/js/51.f7126bbe.js"><link rel="prefetch" href="/assets/js/52.f0d8d96d.js"><link rel="prefetch" href="/assets/js/53.cd2d55b4.js"><link rel="prefetch" href="/assets/js/54.af51ca2e.js"><link rel="prefetch" href="/assets/js/55.605c94a0.js"><link rel="prefetch" href="/assets/js/56.89f90357.js"><link rel="prefetch" href="/assets/js/57.b58d3ca7.js"><link rel="prefetch" href="/assets/js/58.e264e606.js"><link rel="prefetch" href="/assets/js/59.bb778e8c.js"><link rel="prefetch" href="/assets/js/6.25df8b22.js"><link rel="prefetch" href="/assets/js/60.84972cf0.js"><link rel="prefetch" href="/assets/js/61.6f834c11.js"><link rel="prefetch" href="/assets/js/62.21cc92d2.js"><link rel="prefetch" href="/assets/js/63.3aba2312.js"><link rel="prefetch" href="/assets/js/64.650f2cbb.js"><link rel="prefetch" href="/assets/js/65.ecab0d5f.js"><link rel="prefetch" href="/assets/js/66.ba49376c.js"><link rel="prefetch" href="/assets/js/67.eed9af63.js"><link rel="prefetch" href="/assets/js/68.185d281a.js"><link rel="prefetch" href="/assets/js/69.b46b4b46.js"><link rel="prefetch" href="/assets/js/7.8d446f1b.js"><link rel="prefetch" href="/assets/js/70.8c33bfa5.js"><link rel="prefetch" href="/assets/js/71.22f91afd.js"><link rel="prefetch" href="/assets/js/72.0c4f6101.js"><link rel="prefetch" href="/assets/js/73.66593ad1.js"><link rel="prefetch" href="/assets/js/74.e0c81322.js"><link rel="prefetch" href="/assets/js/75.0e0e45fc.js"><link rel="prefetch" href="/assets/js/76.deaba6ff.js"><link rel="prefetch" href="/assets/js/77.b4cbf344.js"><link rel="prefetch" href="/assets/js/78.0738853d.js"><link rel="prefetch" href="/assets/js/79.fc35e495.js"><link rel="prefetch" href="/assets/js/8.b32112cb.js"><link rel="prefetch" href="/assets/js/80.32e5f1fd.js"><link rel="prefetch" href="/assets/js/81.9299ce8f.js"><link rel="prefetch" href="/assets/js/82.d9e93eca.js"><link rel="prefetch" href="/assets/js/83.c71b35d4.js"><link rel="prefetch" href="/assets/js/84.3c393e32.js"><link rel="prefetch" href="/assets/js/85.81148ad7.js"><link rel="prefetch" href="/assets/js/86.86cbcc40.js"><link rel="prefetch" href="/assets/js/87.eb6db0a1.js"><link rel="prefetch" href="/assets/js/88.3936ce96.js"><link rel="prefetch" href="/assets/js/89.0835b3b3.js"><link rel="prefetch" href="/assets/js/9.92d0b38a.js"><link rel="prefetch" href="/assets/js/90.3007a879.js"><link rel="prefetch" href="/assets/js/91.4ecf19f9.js"><link rel="prefetch" href="/assets/js/92.8982eb58.js"><link rel="prefetch" href="/assets/js/93.945019dc.js"><link rel="prefetch" href="/assets/js/94.1f60e1c9.js"><link rel="prefetch" href="/assets/js/95.6fa3c63b.js"><link rel="prefetch" href="/assets/js/96.d58fee06.js"><link rel="prefetch" href="/assets/js/97.1366fd4f.js"><link rel="prefetch" href="/assets/js/98.c75e6442.js"><link rel="prefetch" href="/assets/js/99.dc8963c8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.095b1aa1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>鄺.kの博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>遇事不决，可问春风。春风不语，遵循己心</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.gif" alt="鄺.kの博客" class="logo"> <span class="site-name">鄺.kの博客</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.gif" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    鄺.k
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>120</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>20</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blogs/jsmd/082501.html" class="sidebar-link">js简介组成</a></li><li><a href="/blogs/jsmd/082502.html" aria-current="page" class="active sidebar-link">关系运算符和关系表达式</a></li><li><a href="/blogs/jsmd/082503.html" class="sidebar-link">代码调试介绍 数组 循环结构</a></li><li><a href="/blogs/jsmd/082601.html" class="sidebar-link">函数</a></li><li><a href="/blogs/jsmd/082602.html" class="sidebar-link">高阶函数</a></li><li><a href="/blogs/jsmd/082701.html" class="sidebar-link">内置对象的API</a></li><li><a href="/blogs/jsmd/082702.html" class="sidebar-link">WebApi</a></li><li><a href="/blogs/jsmd/082801.html" class="sidebar-link">排他思想</a></li><li><a href="/blogs/jsmd/082802.html" class="sidebar-link">DOM节点</a></li><li><a href="/blogs/jsmd/082803.html" class="sidebar-link">localstorage与sessionstorage</a></li><li><a href="/blogs/jsmd/082901.html" class="sidebar-link">getComputedStyle()获取元素一切样式属性</a></li><li><a href="/blogs/jsmd/083001.html" class="sidebar-link">动画经典案例</a></li><li><a href="/blogs/jsmd/083101.html" class="sidebar-link">拖拽盒子</a></li><li><a href="/blogs/jsmd/090101.html" class="sidebar-link">分支结构</a></li><li><a href="/blogs/jsmd/090102.html" class="sidebar-link">定义函数三种方式</a></li><li><a href="/blogs/jsmd/090103.html" class="sidebar-link">箭头函数</a></li><li><a href="/blogs/jsmd/090201.html" class="sidebar-link">es5原型链的继承</a></li><li><a href="/blogs/jsmd/090301.html" class="sidebar-link">jQuery介绍</a></li><li><a href="/blogs/jsmd/090401.html" class="sidebar-link">jQuery事件</a></li><li><a href="/blogs/jsmd/090501.html" class="sidebar-link">数据可视化</a></li><li><a href="/blogs/jsmd/090504.html" class="sidebar-link">数据可视化 项目</a></li><li><a href="/blogs/jsmd/090601.html" class="sidebar-link">实用网站</a></li><li><a href="/blogs/jsmd/090701.html" class="sidebar-link">客户端与服务器基本概念</a></li><li><a href="/blogs/jsmd/090801.html" class="sidebar-link">Ajax基本概念</a></li><li><a href="/blogs/jsmd/090802.html" class="sidebar-link">jQuery中Ajax方法请求服务</a></li><li><a href="/blogs/jsmd/090803.html" class="sidebar-link">formData对象</a></li><li><a href="/blogs/jsmd/091001.html" class="sidebar-link">XMLHttpRequest对象</a></li><li><a href="/blogs/jsmd/091002.html" class="sidebar-link">URL 编码 解码</a></li><li><a href="/blogs/jsmd/091003.html" class="sidebar-link">form表单重置</a></li><li><a href="/blogs/jsmd/091101.html" class="sidebar-link">jQuery文件上传进度功能</a></li><li><a href="/blogs/jsmd/091102.html" class="sidebar-link">HTTP协议</a></li><li><a href="/blogs/jsmd/091103.html" class="sidebar-link">同源策略</a></li><li><a href="/blogs/jsmd/091201.html" class="sidebar-link">防抖 节流</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>关系运算符和关系表达式</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">关系运算符和关系表达式</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>鄺.k</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2018/8/25</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>javascript</span></i></div></div> <div class="theme-reco-content content__default"><div class="custom-block tip"><p class="title">介绍</p><p>运算符与表达式<br>
+数据类型比较<br>
+数据类型转换<br>
+流程控制<br></p></div> <h2 id="_01-运算符与表达式"><a href="#_01-运算符与表达式" class="header-anchor">#</a> 01-运算符与表达式</h2> <p><strong>1.1-关系运算符和关系表达式</strong></p> <ul><li>1.关系运算符：八种
+<ul><li><div class="language- extra-class"><pre><code>&gt;：大于，左边大于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>&lt;：小于，左边小于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>&gt;=：大于等于，左边大于或者等于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>&lt;=：小于等于，左边小于或者等于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>==：等于，左边等于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>!=：不等于，左边不等于右边
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>===：全等，左边等于右边且类型一致
+</code></pre></div></li> <li><div class="language- extra-class"><pre><code>!==：不全等，左边不等于右边或者类型不一致
+</code></pre></div></li></ul></li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">/**1.关系运算符（比较运算符）：比较两个数据之间的关系（某种条件是否成立）
+            * 八种： &gt;  &gt;=  &lt;  &lt;=  ==  !=  ===全等 !== 不全等
+        * 2.关系表达式：由关系运算符组成的式子    例如:  2 &gt; 1
+                * 只要是表达式，就会有运算结果
+         * 3.关系表达式的结果一定是布尔类型：true代表成立，false代表不成立
+         */</span>
+    
+        <span class="token comment">//1.基本使用</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">3</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true  成立</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token operator">&lt;</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false 不成立</span>
+    
+        <span class="token comment">//2.相等与不等:只比较数据的值，不比较数据的类型</span>
+        <span class="token comment">//注意：一个 = 号表示赋值运算符  两个 == 是比较运算符，它们作用不一样，不要搞混淆了</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true   常用</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;1&quot;</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true  他们的值一样，只是数据类型不一样</span>
+    
+        <span class="token comment">//3.全等不全等： 先比较数据的值，再比较数据的类型</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;1&quot;</span> <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false  两者的值虽然相等都是1，但是他们数据类型不一样，所以不成立</span>
+    
+    
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p><strong>1.2-逻辑运算符和逻辑表达式</strong></p> <ul><li>1.逻辑运算符：三种
+<ul><li>&amp;&amp;：逻辑与 ，读作并且</li> <li>||：逻辑或，读作或者</li> <li>!：逻辑非，读作取反
+<ul><li>true（真）变false（假），false（假）变true（真）</li></ul></li></ul></li> <li>2.逻辑表达式：表达式1 逻辑运算符 表达式2</li> <li>3.运算口诀
+<ul><li>逻辑与表达式&amp;&amp;：一假则假
+<ul><li>左右两边同时成立，才为真，否则为假
+<ul><li>例如：有为青年找女朋友： 白富美：既要白，又要富，还要美。多个条件需要同时成立</li></ul></li></ul></li> <li>逻辑或表达式||：一真则真
+<ul><li>左右两边同时为假，才为假，否则为真
+<ul><li>例如：小资青年找女朋友：要么白，要么富，要么美。多个条件任意一个成立即可</li></ul></li></ul></li> <li>逻辑非!：取反
+<ul><li>例如：屌丝青年找女朋友：女的。 非xxxx类似于一种否定逻辑</li></ul></li></ul></li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code>  <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    
+        <span class="token comment">/* 
+            0.关系运算符：某种条件的关系（成立/不成立），例如我的年龄大于你的年龄30&gt;20
+            1.逻辑运算符：多个条件之间的关系
+            2.逻辑运算符只有三种
+                * &amp;&amp; :逻辑与 ，读作并且
+                * || :逻辑或，读作或者
+                * !  :逻辑非，读作取反
+                    * true（真）变false（假），false（假）变true（真）
+         * 3.逻辑表达式: 表达式1 逻辑运算符 表达式2 
+         */</span>
+    
+        <span class="token comment">//1.逻辑与&amp;&amp;结果： 一假为假     （左右两边同时成立，才为真，否则为假）</span>
+        <span class="token comment">//表达式1    &amp;&amp;  表达式2       运算结果</span>
+        <span class="token comment">//真              真             真</span>
+        <span class="token comment">//真              假             假</span>
+        <span class="token comment">//假              真             假</span>
+        <span class="token comment">//假              假             假</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token operator">&gt;</span> <span class="token number">50</span> <span class="token operator">&amp;&amp;</span> <span class="token number">10</span> <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//true  左右两边同时成立</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token operator">&gt;</span> <span class="token number">500</span> <span class="token operator">&amp;&amp;</span> <span class="token number">10</span> <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//false   因为左边不成立</span>
+    
+        <span class="token comment">//普通丈母娘找女婿 ： 有车 有房 有存款     三个条件都要满足，缺一不可    </span>
+    
+    
+    
+        <span class="token comment">//2.逻辑或 ||结果 : 一真则真  （左右两边同时为假，才为假，否则为真）</span>
+        <span class="token comment">//表达式1    ||  表达式2    运算结果</span>
+        <span class="token comment">//真               真         真</span>
+        <span class="token comment">//真               假         真</span>
+        <span class="token comment">//假               真         真</span>
+        <span class="token comment">//假               假         假</span>
+    
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token operator">&gt;</span> <span class="token number">500</span> <span class="token operator">||</span> <span class="token number">10</span> <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//true  只要有一边为真则为真</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">100</span> <span class="token operator">&gt;</span> <span class="token number">500</span> <span class="token operator">||</span> <span class="token number">8</span> <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//false 只有两边都不成立才为假</span>
+    
+        <span class="token comment">//我的丈母娘找女婿 ：要么有车 要么有房  要么有存款   三个条件满足任何一个即可</span>
+    
+        <span class="token comment">//3.逻辑非！ ： 又叫做取反  真变假 假变真</span>
+        <span class="token comment">//    ！    表达式   结果</span>
+        <span class="token comment">//               假         真</span>
+        <span class="token comment">//                真      假</span>
+        <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token operator">!</span><span class="token boolean">false</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> res <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//true  假变真，真变假</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token operator">!</span> <span class="token punctuation">(</span> <span class="token number">2</span> <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//false     2&gt;1的结果是true    与true相反的就是false</span>
+    
+        <span class="token comment">//有的丈母娘找女婿 ：只要不是外地的。   `非xxxx`类似于一种否定逻辑</span>
+    
+    
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br></div></div><p><strong>1.3-运算符优先级</strong></p> <ul><li>不需要刻意的去记，因为开发中很少会遇到多个运算符参与的式子，万一遇到也可以通过()来提升优先级</li> <li>运算符优先级：确定不同运算符的运算规则
+<ul><li>1.() 小括号：优先级运算符 作用就是提升优先级：不被拆散</li> <li>2.自增与自减</li> <li>3.算术运算符（先乘除后加减）</li> <li>4.比较运算符</li> <li>5.逻辑运算符</li> <li>6.赋值运算符</li> <li>同级运算符从左往右运算</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> res <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//5</span>
+
+    <span class="token comment">/**运算符优先级：确定不同运算符的运算顺序
+     * 1.()      小括号：作用就是提升优先级
+     * 2.自增与自减
+     * 3.算术运算符（先乘除后加减）
+     * 4.比较运算符
+     * 5.逻辑运算符
+     * 6.赋值运算符
+     */</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>课堂小菜</p> <div class="language- extra-class"><pre><code>let num = 2;
+let res = num++ * (++num + num - num--);	  //2 *(4 + 4 - 4)  num3
+// ++或--这种自操作：在一个表达式中有多个的情况下，会互相影响（前面影响后面）
+//1.先算num++,后置：先运算后自增 2 * (++num + num - num--),此时num会变成3
+//2.括号提升了优先级：所以先算括号里面的 2 * (4 + num - num--) : num前置：先自增，后参与运算：3-=》4,num == 4
+//3.+和-同级：先算左边 2 * (4 + 4 - num--) :num == 4
+//4.后置--：先参与运算，后自减 2 * (4 + 4 - 4) : num == 3
+
+console.log(res, num);						// 8 3
+</code></pre></div><p><strong>1.4-js转义符(了解)</strong></p> <ul><li>转义符： \ 改变原来符号的作用就叫转义符</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token comment">/**
+     * 转义符： `\`  改变原来符号的作用就叫转义符
+     *  \&quot; :输出双引号
+     *  \t:水平制表符，说人话就是多打几个空格
+     *  \n:换行符
+     *  \\:显示一个\
+     *
+     */</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;出来混了\\那么多年，从最开始的3万，到后来的五万，最后十五万，\n我也\&quot;没有\&quot;想到\t我最后会欠这么多钱&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//出来混了\那么多年，从最开始的3万，到后来的五万，最后十五万，</span>
+<span class="token comment">//我也&quot;没有&quot;想到    我最后会欠这么多钱</span>
+
+<span class="token comment">// 重点：记住单引号里面要使用单引号需要转义，双引号里面使用双引号需要转义</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_02-数据类型比较"><a href="#_02-数据类型比较" class="header-anchor">#</a> 02-数据类型比较</h2> <p><strong>1.1-null与undefined比较</strong></p> <ul><li>undefined与null的区别，两个都表示什么都没有</li> <li>null == undefined：成立，他们的值都是空</li> <li>null === undefined：不成立，他们的值相等但是数据类型不同</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*JS总共有六种数据类型，其中五种基本数据类型，一种复杂数据类型
+
+      *（1）null与undefined有什么区别
+            * null == undefined 成立
+            * null === undefined 不成立
+
+     */</span>
+
+    <span class="token comment">//1.null与undefined的区别：需要记忆</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true  他们的值都是空</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false  他们的值相等 但是数据类型不同</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><strong>1.2-NaN与isNaN</strong></p> <ul><li>1.NaN：Not a Number 不是一个数字
+<ul><li>（1）NaN是number数据类型中一个特殊的数值，是数学计算错误得到的一个结果
+<ul><li>例如： '张三' - 100,在数学上这是一种错误的计算，它的结果就是NaN</li></ul></li> <li>（2）NaN与任何数字都不等，包含它本身</li> <li>（3）NaN与任何数字计算得到的都是NaN</li></ul></li> <li>2.isNaN(数据)：检测一个数据是不是NaN 得到的结果是布尔类型
+<ul><li>例如：isNaN(NaN),结果为true</li> <li>例如：isNaN(123),结果为false，表示123不是NaN</li></ul></li> <li>3.了解：number类型浮点数（小数）精度丢失问题
+<ul><li>（1）小数在进行数学计算时，会有一定的误差，这是计算机本身的bug，不仅是js语言，其他语言也有这个问题</li> <li>（2）解决方案：不要让两个小数比较大小，这种情况一般不会影响正常开发</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*NaN:  not a number 不是一个数字
+       * 1.NaN是number数据类型中一个特殊的数值，是数学计算错误得到的一个结果
+       * 2.NaN与任何数字都不相等，包括它的本身
+       * 3.NaN与任何数字计算得到的都是NaN
+      isNaN(数据):判断一个数据是不是NaN，结果为布尔类型  true：是 false:不是
+     */</span>
+
+    <span class="token comment">//1.NaN:not a number 不是一个数字</span>
+    <span class="token comment">//NaN是number数据类型中一个特殊的数值，是数学计算错误得到的一个结果</span>
+    <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token string">'张三'</span> <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token comment">//当某个表达式无法计算（计算错误时），会得到NaN</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> num <span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//NaN</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token keyword">typeof</span>  <span class="token number">NaN</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//number</span>
+
+    <span class="token comment">//2.NaN与任何数字都不等，包含它本身</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">NaN</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">NaN</span> <span class="token operator">==</span> <span class="token number">NaN</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//false</span>
+
+    <span class="token comment">//3.NaN与任何数字计算得到的都是NaN</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">NaN</span> <span class="token operator">+</span> <span class="token number">100</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//NaN</span>
+
+    <span class="token comment">//4.isNaN(数据)：检测一个数据是不是NaN  得到的结果是布尔类型</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">isNaN</span> <span class="token punctuation">(</span> <span class="token number">NaN</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//true</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">isNaN</span> <span class="token punctuation">(</span> <span class="token number">123</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//false</span>
+    <span class="token comment">//如果检测的数据不是number类型，js编译器会尝试着将这个数据转化为number类型，然后再判断</span>
+    <span class="token comment">//这种数据类型转换称为隐式转换：下一小节讲解</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">isNaN</span> <span class="token punctuation">(</span> <span class="token string">&quot;abc&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//true</span>
+
+    <span class="token comment">//5.number浮点数（小数）精度丢失</span>
+    <span class="token comment">//小数在进行数学计算时，会有一定的误差，这是计算机本身的bug，不仅是js语言，其他语言也有这个问题</span>
+    <span class="token comment">//解决方案：不要让两个小数比较大小，这种情况一般不会影响正常开发</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//0.300000000000004</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token operator">==</span> <span class="token number">0.3</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">0.4</span> <span class="token operator">+</span> <span class="token number">0.5</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//0.9</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token number">1.1</span> <span class="token operator">-</span> <span class="token number">0.2</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//0.9000000000000001</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p><strong>1.3-字符串比较</strong></p> <ul><li>1.字符串比较规则是按照字母的顺序挨个进行比较，与字符串长度无关</li> <li>2.字符串比较区分大小写</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+	<span class="token comment">/*
+		1.字符串比较规则，按照字母的顺序，挨个比较
+		2.字符串的比较与长度无关
+		3.字符串的比较区分大小写
+	*/</span>
+    
+    <span class="token comment">// 字符串的比较是挨个比较对应顺序位置的字母，与长度无关</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'abc'</span> <span class="token operator">&gt;</span> <span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">// false，a比d小，所以abc比d小</span>
+    
+    <span class="token comment">// 字符串的比较区分大小写，小写大于大写（与ASCII码表对应）</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a'</span> <span class="token operator">&gt;</span> <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>					<span class="token comment">// true，a对应ASCII码表为97，A为65</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="_03-数据类型转换"><a href="#_03-数据类型转换" class="header-anchor">#</a> 03-数据类型转换</h2> <p><strong>1.1-显式数据类型转换</strong></p> <ul><li><strong>注意：数据类型的转变并不会改变原来变量的值，而是会产生一个新的值</strong> <ul><li>例如：（1） let num = '10';</li> <li>parseInt(num) ：</li></ul></li> <li>为什么要有数据类型转换？
+<ul><li>有时候想要进行某种计算的时候，由于数据类型不同往往会产生一些错误的结果，为了避免这种结果，我们需要将某种数据类型转化为其他数据类型
+<ul><li>例如：prompt()输入框得到的数据的类型是string，如果想要进行数学计算则需要转成number类型，否则会计算出错</li></ul></li></ul></li> <li>什么是显示类型转换：程序员主动转换（可以理解为使用关键字来转换）
+<ul><li>这种方式代码易读性更高</li></ul></li></ul> <p>1-其他类型转换成number类型</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+	<span class="token comment">/**转换成number
+     * 第一种方式：`parseInt()`
+     *          * 作用：转换整数
+     *          * 从左往右解析，遇到非数字结束（停止解析），将解析好的整数返回
+     *          * 如果第一个字符不是数字或者符号就返回NaN
+     * 第二种方式：`parseFloat()`
+     *          * 作用：转换小数
+     *          * 与parseInt()最大的区别就是可以解析字符串的第一个小数点
+     * 第三种方式: `Number()`
+               * 作用：布尔类型转换成数字 
+     *         * 可以把任意值转换成数值，如果要转换的字符串只要有一个不是数字，返回NaN
+     */</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Number</span> <span class="token punctuation">(</span> <span class="token string">&quot;123&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//123</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Number</span> <span class="token punctuation">(</span> <span class="token string">&quot;123.1.1abc&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//NaN  只要有一个字符不是数字，得到就是NaN</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">parseInt</span> <span class="token punctuation">(</span> <span class="token string">&quot;123.1.1abc&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//123  从左往右解析，遇到非数字结束</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">parseFloat</span> <span class="token punctuation">(</span> <span class="token string">&quot;123.1.1abc&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//123.1  与parseInt唯一的区别就是可以识别第一个小数点</span>
+
+    <span class="token comment">//一般数字字符串使用parseInt和parseFloat，其他数据类型转数字使用Number（）</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Number</span> <span class="token punctuation">(</span> <span class="token boolean">true</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//1布尔类型转换number会得到数字0(false)和1（true）</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Number</span> <span class="token punctuation">(</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//0  空字符串转number会得到0</span>
+	<span class="token comment">//js基础面试题可能会遇到</span>
+	<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">Number</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//NaN</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">Number</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//0</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p><strong>2-其他类型转换成string类型</strong></p> <ul><li>1.第一种方式：变量名   .toString()
+<ul><li><strong>如果变量的值为undefined或者null，则会报错</strong></li></ul></li> <li>2.第二种方式：String(变量名)
+<ul><li>与第一种方式的唯一区别就是如果变量的值为undefined或者null不会报错，会得到undefined或者null</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+         <span class="token comment">/**转换成字符串string
+         * 第一种方式：`变量名.toString()`
+         *      * 如果变量的值为undefined或者null，则会报错
+         *  第二种方式：`String(变量名)`
+         *      * 与第一种方式的唯一区别就是如果变量的值为undefined或者null不会报错，会得到undefined或者null
+         */</span>
+        
+    
+        <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    
+        <span class="token comment">//1.常用： String (  )</span>
+        <span class="token comment">//特点：可以识别undefined与null</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">String</span> <span class="token punctuation">(</span> <span class="token keyword">null</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token keyword">typeof</span> <span class="token function">String</span> <span class="token punctuation">(</span> a <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token comment">// //2.   变量名.toString ()</span>
+        <span class="token comment">//特点：无法识别undefined与null，程序会报错</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> a<span class="token punctuation">.</span><span class="token function">toString</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p><strong>3-其他类型转换成boolean类型</strong></p> <ul><li>只有一种方式：  Boolean(变量名)
+<ul><li>官网文档中有八种情况得到的false：0、-0、null、false、NaN、undefined、或者空字符串（&quot;&quot;）、 document.all（js下个阶段会接触的东西）</li> <li>其他一切均为true
+<ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" rel="noopener noreferrer">关于Boolean（）描述<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/**转换成boolean
+         * 只有一种方式:  `Boolean(变量名)`
+         *      * 以下八种情况会得到false，其余的一切数据得到都是true
+         *          * 数字0、-0、null、false、undefined、空字符串”“、NaN
+         */</span>
+    
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token operator">-</span><span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token keyword">null</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token boolean">false</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token keyword">undefined</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token string">''</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//false</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token function">Boolean</span> <span class="token punctuation">(</span> <span class="token number">NaN</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//false</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><strong>1.2-隐式数据类型转换</strong></p> <p>显式转换：程序员主动调用语法去转换数据类型，语义更加明确</p> <p>隐式转换：运算符两边数据类型不一致，编译器自动帮我们转换一致在计算，这是js的语法特点</p> <ul><li>隐式转换
+<ul><li>1.转成string类型：+号两边如果有一边是字符串，则会把另一边转换成字符串，然后进行拼接</li> <li>2.转成number类型：以下几种运算符会将任何数据转换成number类型再运算，如果无法转换则为NaN
+<ul><li>数学正号 ： +num
+<ul><li>当 +/-号写在一个变量名的前面，此时表示数学的正/负数</li></ul></li> <li>自增自减（++ --）</li> <li>算术运算符（+ - * / %）</li> <li>比较运算符(&gt;  &lt;  &gt;=  &lt;=  ==  !=  ===  !==)
+<ul><li>说明：全等与不全等会先比较值（此时会隐式转换再比较），然后再比较数据类型</li></ul></li></ul></li> <li>3.转成boolean类型：逻辑非（！）会将任何数据转为boolean类型再运算</li> <li>4.+号有三种含义：数学正负号（转成number）、算术运算符（转成number）、字符串连接符（转成string)</li></ul></li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">/* 
+        1. 显式转换 ： 程序员主动使用语法来转换（阅读性最高）
+
+        2. 隐式转换 ： 如果运算符两边数据类型不一致，编译器偷偷的帮我们转成一致再计算。
+            (1)其他数据类型转number :
+                数学正号 : +num
+                自增自减： ++ --  
+                算术运算符： + - * / %
+                关系运算符 : &gt; &lt; &gt;= &lt;=
+            (2)其他数据类型转string : +
+            (3)其他数据类型转boolean : !
+        
+         */</span>
+
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'100'</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">// Number('100') - 1 = 100 - 1 = 99</span>
+
+            <span class="token comment">//1.其他数据类型转number :</span>
+            <span class="token comment">//    数学正号 : +num</span>
+            <span class="token comment">//    自增自减： ++ --  </span>
+            <span class="token comment">//    算术运算符： + - * / %</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">+</span><span class="token string">'10'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">// Number('10')</span>
+            
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'张三'</span> <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// Number('张三') - 100 = NaN - 100 = NaN</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">-</span> <span class="token string">'1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 10 - Number('1') = 10 - 1 = 9</span>
+            
+            <span class="token comment">//2. 其他数据类型转string : +</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1'</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//'1' + String(1) = '1' + '1' = '11'</span>
+
+            <span class="token comment">/* 
+            容易混淆点 ： 把算术运算符 + 转换规则  与 连接符 + 转换规则搞混淆
+             */</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1'</span> <span class="token operator">+</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//1true 连接符 ‘1’ + String(true) = '1' + 'true' = '1true'</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//2 算术运算符  1 + Number(true) = 1 + 1 = 2</span>
+
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//NaN 算术 1 + Number(undefined) = 1 + NaN = NaN</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//1 算术 1 + Number(null) = 1+ 0 = 1</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1'</span> <span class="token operator">+</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//1null 连接 '1' + String(null) = '1' + 'null' = '1null'</span>
+            
+            <span class="token comment">//其他数据类型转boolean : !</span>
+            <span class="token comment">//取反 ： true变false false变true</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//(1)!Boolean(1) = !true = false</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//(1)!!Boolean('') (2)!!false (3)!true = false</span>
+
+
+<span class="token comment">//课堂小彩蛋 ： 经典js面试题</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">+</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//	NaN</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">-</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//  NaN</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">-</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// NaN</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token operator">-</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">//0            </span>
+
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><h2 id="_04-流程控制"><a href="#_04-流程控制" class="header-anchor">#</a> <strong>04-流程控制</strong></h2> <ul><li>编程语言都有三大流程控制结构
+<ul><li>顺序结构：代码从上往下顺序执行</li> <li>分支结构：代码选择执行</li> <li>循环结构：代码重复执行</li></ul></li></ul> <p><strong>05-分支结构</strong></p> <p>分支结构作用：代码根据条件执行</p> <ul><li>为什么要有分支结构？
+<ul><li>现实世界中，我们在做某些事情的时候是有前提条件的，例如：我今天考试了，考的好与坏与回家的状态不一样的？
+<ul><li>考的好：回家有赏</li> <li>靠的不好：回家有伤</li></ul></li></ul></li></ul> <p>1.1-if单分支结构</p> <ul><li>1.if结构语法：if(条件 true/false){ 条件成立时需要执行的代码 }</li> <li>2.if结构补充说明：
+<ul><li>1.大括号中可以是任何代码，不限数量</li> <li>2.如果大括号中代码有且只有一行，则可以省略大括号。这种写法代码不规范，不是老司机的作风</li></ul></li> <li>3.注意点:小括号中的条件可以是哪些呢
+<ul><li>(1)关系表达式：结果一定是布尔类型</li> <li>(2)布尔类型的值：true和false</li> <li>(3)其他表达式和值：都会先转换成布尔类型再判断真和假</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+
+
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token comment">//1.默认情况下，代码是从上往下执行的（顺序结构）</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我今天考试了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我回家了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸打了我一顿&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我睡觉了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//需求：考试不及格爸爸才打我，及格了就不打</span>
+
+    <span class="token comment">//2.if分支结构：根据条件来执行代码</span>
+
+    <span class="token comment">/**if结构语法
+       if ( 条件   true/false ){
+            条件成立时需要执行的代码
+        }
+     */</span>
+
+    <span class="token comment">//示例1</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我被执行了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;111&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//只有大括号内的代码才是根据条件执行的，大括号后面的代码还是顺序执行</span>
+
+    <span class="token comment">//需求实现</span>
+    <span class="token keyword">let</span> score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我今天考试了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我回家了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&lt;</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸打了我一顿&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我睡觉了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//注意点：小括号中的条件可以是哪些呢</span>
+    <span class="token comment">/*
+    (1) [通常]关系表达式：结果一定是布尔类型
+    (2) 布尔类型的值：true和false
+    (3) 其他表达式和值：都先转换成布尔类型再判断真会和假
+     */</span>
+    <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//num是10，转换成布尔类型是true，所以会执行大括号代码</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'num满足了条件'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><p><strong>1.2-if-else双分支结构</strong></p> <div class="language- extra-class"><pre><code>if（条件）{
+    条件成立时需要执行的代码
+}else{
+    条件不成立时需要执行的代码
+}
+</code></pre></div><ul><li>1.if-esle结构语法:用于两种互斥的条件判断
+<ul><li>例如：如果(if)我的钱超过100块就洗脚(也就是说钱&gt;=100)，否则(else)不洗脚（也就是说钱&lt;100）</li></ul></li> <li>2.if-else结构注意点
+<ul><li>if大括号中的代码与else大括号的代码只会执行一个，不会同时执行</li></ul></li> <li>if-else语句的作用主要就是为了提高代码的运行效率,虽然可以用两个if语句来代替if-else语句，但是两个if语句需要判断两次，而if-else只需要判断一次</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token comment">//需求：(1)如果不及格，爸爸就打我 (2)如果及格，爸爸给我买奥迪</span>
+
+    <span class="token comment">//1.用if实现</span>
+    <span class="token keyword">let</span> score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我今天考试了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我回家了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//及格</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸给我买了一辆奥迪&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&lt;</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//不及格</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸打了我一顿&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我睡觉了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//2.if-else结构：用于两个互斥的条件</span>
+    <span class="token comment">//优点：只需要一次判断</span>
+    <span class="token comment">/*语法
+    if(条件){
+        条件成立时需要执行的代码
+    }else{
+        条件不成立时需要执行的代码
+    }
+
+    if-else结构注意点：if大括号中的代码与else大括号的代码一定会执行一个，不会同时执行
+     */</span>
+
+    score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我今天考试了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我回家了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//及格</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸给我买了一辆奥迪&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token comment">//不及格</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸打了我一顿&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我睡觉了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//if-else结构注意点：if大括号中的代码与else大括号的代码一定会执行一个，不会同时执行</span>
+    <span class="token comment">//世界上最遥远的距离不是生与死，而是我在if里，你在esle里，看起来那么近却永远不能在一起</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'执行了if中的语句'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'执行了else中的语句'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br></div></div><p><strong>1.3-if-else if-else多分支结构</strong></p> <ul><li><p>1.if-else if-else结构语法：</p> <p>if(条件1){
+条件1成立时需要执行的代码
+}else if(条件2){
+条件2成立时需要执行的代码
+}else if(条件3){
+条件3成立时需要执行的代码
+}else{
+以上所有条件都不成立时需要执行的代码
+}</p></li> <li><p>2.注意点：</p> <ul><li>(1) if-else if -else结构中必须以if开头，中间的else if可以是多个，末尾的else可以省略（一般都不会省略）</li> <li>(2)if-else if-else语句中所有的大括号中的代码只会执行其中一个，不会执行多个</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token comment">//需求：(1)如果不及格，爸爸就打我 (2)如果60-70，爸爸给我买奥迪 （3）如果70-80分，爸爸给我买保时捷</span>
+    <span class="token comment">//(4)如果超过80分，爸爸给我买法拉利</span>
+
+    <span class="token comment">/**
+     * if-elseif-else结构语法：用于多种条件判断
+
+      if(条件1){
+            条件1成立时需要执行的代码
+      }else if(条件2){
+            条件2成立时需要执行的代码
+      }else if(条件3){
+            条件3成立时需要执行的代码
+      }else{
+            以上所有条件都不成立时需要执行的代码
+      }
+
+     * 注意点：
+        * (1) if-else if -else结构中必须以if开头，中间的else if可以是多个，末尾的esle可以省略（一般都不会省略）
+        * (2)if-else if-else语句中所有的大括号中的代码最多只会执行一个，不会执行多个
+
+     */</span>
+
+    <span class="token keyword">let</span> score <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我今天考试了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我回家了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸给我买了一辆法拉利&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">{</span>						<span class="token comment">//隐藏条件: score &lt; 80</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸给我买了一辆保时捷&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span>						<span class="token comment">//隐藏条件: socre &lt; 70</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸给我买了一辆奥迪&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>										<span class="token comment">//隐藏条件： score &lt; 60</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;爸爸打了我一顿&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span> <span class="token punctuation">(</span> <span class="token string">&quot;我睡觉了&quot;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blogs/jsmd/082501.html" class="prev">
+            js简介组成
+          </a></span> <span class="next"><a href="/blogs/jsmd/082503.html">
+            代码调试介绍 数组 循环结构
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082502.html#_01-运算符与表达式" class="sidebar-link reco-side-_01-运算符与表达式" data-v-70334359>01-运算符与表达式</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082502.html#_02-数据类型比较" class="sidebar-link reco-side-_02-数据类型比较" data-v-70334359>02-数据类型比较</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082502.html#_03-数据类型转换" class="sidebar-link reco-side-_03-数据类型转换" data-v-70334359>03-数据类型转换</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082502.html#_04-流程控制" class="sidebar-link reco-side-_04-流程控制" data-v-70334359>04-流程控制</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div></div><canvas id="Ribbon"></canvas><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.5df4eb50.js" defer></script><script src="/assets/js/3.15797152.js" defer></script><script src="/assets/js/1.06e244cb.js" defer></script><script src="/assets/js/33.e9c68e7a.js" defer></script>
+  </body>
+</html>

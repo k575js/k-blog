@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WebApi | 鄺.kの博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="遇事不决，可问春风。春风不语，遵循己心">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.095b1aa1.css" as="style"><link rel="preload" href="/assets/js/app.5df4eb50.js" as="script"><link rel="preload" href="/assets/js/3.15797152.js" as="script"><link rel="preload" href="/assets/js/1.06e244cb.js" as="script"><link rel="preload" href="/assets/js/38.68856c82.js" as="script"><link rel="prefetch" href="/assets/js/10.591c55d7.js"><link rel="prefetch" href="/assets/js/100.43169891.js"><link rel="prefetch" href="/assets/js/101.4a0a69a9.js"><link rel="prefetch" href="/assets/js/102.a65a2884.js"><link rel="prefetch" href="/assets/js/103.57922ac5.js"><link rel="prefetch" href="/assets/js/104.4c19aaf2.js"><link rel="prefetch" href="/assets/js/105.68564040.js"><link rel="prefetch" href="/assets/js/106.530cf096.js"><link rel="prefetch" href="/assets/js/107.5d3b98b4.js"><link rel="prefetch" href="/assets/js/108.28d0a7b9.js"><link rel="prefetch" href="/assets/js/109.6d64983e.js"><link rel="prefetch" href="/assets/js/11.709c1358.js"><link rel="prefetch" href="/assets/js/110.a4d0e266.js"><link rel="prefetch" href="/assets/js/111.d0996591.js"><link rel="prefetch" href="/assets/js/112.c4456c4e.js"><link rel="prefetch" href="/assets/js/113.2f9086e0.js"><link rel="prefetch" href="/assets/js/114.34a0f2d1.js"><link rel="prefetch" href="/assets/js/115.55b6bd40.js"><link rel="prefetch" href="/assets/js/116.c399694f.js"><link rel="prefetch" href="/assets/js/117.358b8a6b.js"><link rel="prefetch" href="/assets/js/118.2b5e450f.js"><link rel="prefetch" href="/assets/js/119.b0ea0739.js"><link rel="prefetch" href="/assets/js/12.d34481b5.js"><link rel="prefetch" href="/assets/js/120.02957164.js"><link rel="prefetch" href="/assets/js/121.047c3237.js"><link rel="prefetch" href="/assets/js/122.ea42b24f.js"><link rel="prefetch" href="/assets/js/123.d47cde08.js"><link rel="prefetch" href="/assets/js/124.3b4f7411.js"><link rel="prefetch" href="/assets/js/125.def10d4f.js"><link rel="prefetch" href="/assets/js/126.b0c139f8.js"><link rel="prefetch" href="/assets/js/127.5ea771f5.js"><link rel="prefetch" href="/assets/js/128.571d10c5.js"><link rel="prefetch" href="/assets/js/129.47ca4fa3.js"><link rel="prefetch" href="/assets/js/13.9be62f33.js"><link rel="prefetch" href="/assets/js/130.38508d86.js"><link rel="prefetch" href="/assets/js/14.041ed4bc.js"><link rel="prefetch" href="/assets/js/15.4cbfab79.js"><link rel="prefetch" href="/assets/js/16.d580ddff.js"><link rel="prefetch" href="/assets/js/17.c52346dc.js"><link rel="prefetch" href="/assets/js/18.a8e74f9b.js"><link rel="prefetch" href="/assets/js/19.19dcbcf8.js"><link rel="prefetch" href="/assets/js/20.2b097e8c.js"><link rel="prefetch" href="/assets/js/21.2e3019bf.js"><link rel="prefetch" href="/assets/js/22.2bcf9d3b.js"><link rel="prefetch" href="/assets/js/23.79ecf207.js"><link rel="prefetch" href="/assets/js/24.2f614784.js"><link rel="prefetch" href="/assets/js/25.b17f23a9.js"><link rel="prefetch" href="/assets/js/26.4393bab0.js"><link rel="prefetch" href="/assets/js/27.4e3605da.js"><link rel="prefetch" href="/assets/js/28.f5085f32.js"><link rel="prefetch" href="/assets/js/29.85f40562.js"><link rel="prefetch" href="/assets/js/30.38a4057f.js"><link rel="prefetch" href="/assets/js/31.52e017ca.js"><link rel="prefetch" href="/assets/js/32.f93bc287.js"><link rel="prefetch" href="/assets/js/33.e9c68e7a.js"><link rel="prefetch" href="/assets/js/34.ec8eeb75.js"><link rel="prefetch" href="/assets/js/35.84d25e42.js"><link rel="prefetch" href="/assets/js/36.c84bbef5.js"><link rel="prefetch" href="/assets/js/37.aded605e.js"><link rel="prefetch" href="/assets/js/39.1ed162e6.js"><link rel="prefetch" href="/assets/js/4.95d80005.js"><link rel="prefetch" href="/assets/js/40.af030705.js"><link rel="prefetch" href="/assets/js/41.87576345.js"><link rel="prefetch" href="/assets/js/42.14af7b33.js"><link rel="prefetch" href="/assets/js/43.adc16fe9.js"><link rel="prefetch" href="/assets/js/44.9a6fe7b0.js"><link rel="prefetch" href="/assets/js/45.21b43a08.js"><link rel="prefetch" href="/assets/js/46.7f36644e.js"><link rel="prefetch" href="/assets/js/47.eba8c703.js"><link rel="prefetch" href="/assets/js/48.47d99fe1.js"><link rel="prefetch" href="/assets/js/49.3ecb92b6.js"><link rel="prefetch" href="/assets/js/5.fd26561e.js"><link rel="prefetch" href="/assets/js/50.5c7b8483.js"><link rel="prefetch" href="/assets/js/51.f7126bbe.js"><link rel="prefetch" href="/assets/js/52.f0d8d96d.js"><link rel="prefetch" href="/assets/js/53.cd2d55b4.js"><link rel="prefetch" href="/assets/js/54.af51ca2e.js"><link rel="prefetch" href="/assets/js/55.605c94a0.js"><link rel="prefetch" href="/assets/js/56.89f90357.js"><link rel="prefetch" href="/assets/js/57.b58d3ca7.js"><link rel="prefetch" href="/assets/js/58.e264e606.js"><link rel="prefetch" href="/assets/js/59.bb778e8c.js"><link rel="prefetch" href="/assets/js/6.25df8b22.js"><link rel="prefetch" href="/assets/js/60.84972cf0.js"><link rel="prefetch" href="/assets/js/61.6f834c11.js"><link rel="prefetch" href="/assets/js/62.21cc92d2.js"><link rel="prefetch" href="/assets/js/63.3aba2312.js"><link rel="prefetch" href="/assets/js/64.650f2cbb.js"><link rel="prefetch" href="/assets/js/65.ecab0d5f.js"><link rel="prefetch" href="/assets/js/66.ba49376c.js"><link rel="prefetch" href="/assets/js/67.eed9af63.js"><link rel="prefetch" href="/assets/js/68.185d281a.js"><link rel="prefetch" href="/assets/js/69.b46b4b46.js"><link rel="prefetch" href="/assets/js/7.8d446f1b.js"><link rel="prefetch" href="/assets/js/70.8c33bfa5.js"><link rel="prefetch" href="/assets/js/71.22f91afd.js"><link rel="prefetch" href="/assets/js/72.0c4f6101.js"><link rel="prefetch" href="/assets/js/73.66593ad1.js"><link rel="prefetch" href="/assets/js/74.e0c81322.js"><link rel="prefetch" href="/assets/js/75.0e0e45fc.js"><link rel="prefetch" href="/assets/js/76.deaba6ff.js"><link rel="prefetch" href="/assets/js/77.b4cbf344.js"><link rel="prefetch" href="/assets/js/78.0738853d.js"><link rel="prefetch" href="/assets/js/79.fc35e495.js"><link rel="prefetch" href="/assets/js/8.b32112cb.js"><link rel="prefetch" href="/assets/js/80.32e5f1fd.js"><link rel="prefetch" href="/assets/js/81.9299ce8f.js"><link rel="prefetch" href="/assets/js/82.d9e93eca.js"><link rel="prefetch" href="/assets/js/83.c71b35d4.js"><link rel="prefetch" href="/assets/js/84.3c393e32.js"><link rel="prefetch" href="/assets/js/85.81148ad7.js"><link rel="prefetch" href="/assets/js/86.86cbcc40.js"><link rel="prefetch" href="/assets/js/87.eb6db0a1.js"><link rel="prefetch" href="/assets/js/88.3936ce96.js"><link rel="prefetch" href="/assets/js/89.0835b3b3.js"><link rel="prefetch" href="/assets/js/9.92d0b38a.js"><link rel="prefetch" href="/assets/js/90.3007a879.js"><link rel="prefetch" href="/assets/js/91.4ecf19f9.js"><link rel="prefetch" href="/assets/js/92.8982eb58.js"><link rel="prefetch" href="/assets/js/93.945019dc.js"><link rel="prefetch" href="/assets/js/94.1f60e1c9.js"><link rel="prefetch" href="/assets/js/95.6fa3c63b.js"><link rel="prefetch" href="/assets/js/96.d58fee06.js"><link rel="prefetch" href="/assets/js/97.1366fd4f.js"><link rel="prefetch" href="/assets/js/98.c75e6442.js"><link rel="prefetch" href="/assets/js/99.dc8963c8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.095b1aa1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>鄺.kの博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>遇事不决，可问春风。春风不语，遵循己心</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.gif" alt="鄺.kの博客" class="logo"> <span class="site-name">鄺.kの博客</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/avatar.gif" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    鄺.k
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>120</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>20</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/css笔记/" class="nav-link"><i class="undefined"></i>
+  css笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git笔记/" class="nav-link"><i class="undefined"></i>
+  git笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js笔记/" class="nav-link"><i class="undefined"></i>
+  js笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node笔记/" class="nav-link"><i class="undefined"></i>
+  node笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue笔记/" class="nav-link"><i class="undefined"></i>
+  vue笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  MDN Wed 文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-friend"></i>
+      特别感谢
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  vuepress-theme-reco
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://www.recoluan.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  午后南杂
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/howareyou2104/article/details/107412555" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  会飞的小弋
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blogs/jsmd/082501.html" class="sidebar-link">js简介组成</a></li><li><a href="/blogs/jsmd/082502.html" class="sidebar-link">关系运算符和关系表达式</a></li><li><a href="/blogs/jsmd/082503.html" class="sidebar-link">代码调试介绍 数组 循环结构</a></li><li><a href="/blogs/jsmd/082601.html" class="sidebar-link">函数</a></li><li><a href="/blogs/jsmd/082602.html" class="sidebar-link">高阶函数</a></li><li><a href="/blogs/jsmd/082701.html" class="sidebar-link">内置对象的API</a></li><li><a href="/blogs/jsmd/082702.html" aria-current="page" class="active sidebar-link">WebApi</a></li><li><a href="/blogs/jsmd/082801.html" class="sidebar-link">排他思想</a></li><li><a href="/blogs/jsmd/082802.html" class="sidebar-link">DOM节点</a></li><li><a href="/blogs/jsmd/082803.html" class="sidebar-link">localstorage与sessionstorage</a></li><li><a href="/blogs/jsmd/082901.html" class="sidebar-link">getComputedStyle()获取元素一切样式属性</a></li><li><a href="/blogs/jsmd/083001.html" class="sidebar-link">动画经典案例</a></li><li><a href="/blogs/jsmd/083101.html" class="sidebar-link">拖拽盒子</a></li><li><a href="/blogs/jsmd/090101.html" class="sidebar-link">分支结构</a></li><li><a href="/blogs/jsmd/090102.html" class="sidebar-link">定义函数三种方式</a></li><li><a href="/blogs/jsmd/090103.html" class="sidebar-link">箭头函数</a></li><li><a href="/blogs/jsmd/090201.html" class="sidebar-link">es5原型链的继承</a></li><li><a href="/blogs/jsmd/090301.html" class="sidebar-link">jQuery介绍</a></li><li><a href="/blogs/jsmd/090401.html" class="sidebar-link">jQuery事件</a></li><li><a href="/blogs/jsmd/090501.html" class="sidebar-link">数据可视化</a></li><li><a href="/blogs/jsmd/090504.html" class="sidebar-link">数据可视化 项目</a></li><li><a href="/blogs/jsmd/090601.html" class="sidebar-link">实用网站</a></li><li><a href="/blogs/jsmd/090701.html" class="sidebar-link">客户端与服务器基本概念</a></li><li><a href="/blogs/jsmd/090801.html" class="sidebar-link">Ajax基本概念</a></li><li><a href="/blogs/jsmd/090802.html" class="sidebar-link">jQuery中Ajax方法请求服务</a></li><li><a href="/blogs/jsmd/090803.html" class="sidebar-link">formData对象</a></li><li><a href="/blogs/jsmd/091001.html" class="sidebar-link">XMLHttpRequest对象</a></li><li><a href="/blogs/jsmd/091002.html" class="sidebar-link">URL 编码 解码</a></li><li><a href="/blogs/jsmd/091003.html" class="sidebar-link">form表单重置</a></li><li><a href="/blogs/jsmd/091101.html" class="sidebar-link">jQuery文件上传进度功能</a></li><li><a href="/blogs/jsmd/091102.html" class="sidebar-link">HTTP协议</a></li><li><a href="/blogs/jsmd/091103.html" class="sidebar-link">同源策略</a></li><li><a href="/blogs/jsmd/091201.html" class="sidebar-link">防抖 节流</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>WebApi</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>鄺.k</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">WebApi</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>鄺.k</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2020/8/27</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>javascript</span></i></div></div> <div class="theme-reco-content content__default"><div class="custom-block tip"><p class="title">介绍</p><p>WebApi <br>
+JavaScript组成三个部分<br>
+获取页面元素<br>
+操作元素属性<br>
+表单元素常用属性<br>
+事件介绍及注册事件<br></p></div> <p><strong>1.获取页面元素</strong>
+-根据选择器selector获取元素
+-document.querySelector('选择器')  获取一个元素
+-document.querySelectorAll('选择器')  获取多个元素
+<strong>2.元素属性操作</strong></p> <ul><li>id</li> <li>className</li> <li>href</li> <li>src</li> <li>innerText</li> <li>value</li> <li>disabled</li> <li>checked</li> <li>selected</li> <li>style：样式
+<strong>3.事件</strong> <ul><li>组成事件的三要素  事件源 事件类型 事件处理函数</li> <li>页面元素注册事件
+<ul><li>鼠标单击onclick</li> <li>鼠标双击ondblclick</li> <li>鼠标移入onmouseover</li> <li>鼠标移出onmouseout</li> <li>成为焦点onfocus</li> <li>失去焦点onblur</li></ul></li></ul></li></ul> <h2 id="_01-webapi"><a href="#_01-webapi" class="header-anchor">#</a> 01-WebApi</h2> <p><strong>1.1-WebAPI概念介绍</strong></p> <ul><li>API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。
+<ul><li>任何开发语言都有自己的API</li> <li>API的特征输入和输出(I/O)</li> <li>API的使用方法(console.log())</li></ul></li> <li>WebAPI概念
+<ul><li>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)</li> <li>此处的Web API特指浏览器提供的API(一组方法)</li></ul></li></ul> <p><strong>1.2-JavaScript组成三个部分</strong></p> <ul><li><strong>1.ECMAScript - JavaScript的核心</strong> <ul><li>定义了javascript的语法规范</li> <li>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了js语言的标准</li></ul></li> <li><strong>2.DOM - 文档对象模型</strong> <ul><li>一套操作页面元素（HTML+CSS）的API</li> <li>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</li></ul></li> <li><strong>3.BOM - 浏览器对象模型</strong> <ul><li>一套操作浏览器功能的API</li> <li>通过BOM可以操作浏览器窗口，比如：弹出框、控制浏览器跳转、获取分辨率等</li></ul></li></ul> <p><strong>1.3-DOM</strong></p> <ul><li><strong>Docuemnt Object Model（文档对象模型）</strong> <ul><li>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</li> <li>HTML DOM 模型被构造为对象的树。</li></ul></li> <li><strong>HTML DOM 树</strong></li> <li><strong>通过可编程的对象模型，JavaScript 获得了足够的能力来创建动态的 HTML。</strong> <ul><li>JavaScript 能够改变页面中的所有 HTML 元素</li> <li>JavaScript 能够改变页面中的所有 HTML 属性</li> <li>JavaScript 能够改变页面中的所有 CSS 样式</li> <li>JavaScript 能够对页面中的所有事件做出反应（交互）</li></ul></li> <li>DOM工作原理介绍</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>网页标题<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;#&quot;</span><span class="token operator">&gt;</span>链接<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p id<span class="token operator">=</span><span class="token string">&quot;p1&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span><span class="token operator">&gt;</span>文本<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/* 
+        1. DOM ： js动态操作网页内容
+
+        2. DOM工作原理 ：
+            硬盘代码读取到内存 -&gt;  浏览器渲染引擎生成DOM树（document） -&gt;  开始渲染页面
+         */</span>
+
+        <span class="token comment">//js为什么可以操作网页的html元素?</span>
+        <span class="token comment">//因为浏览器会将html代码读取到内存中，生成一颗dom树对象（document）</span>
+        <span class="token comment">//修改了dom树内容，最终页面也会变化</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p><strong>1.4-BOM</strong></p> <ul><li>Browser Object Model:浏览器对象模型</li> <li>BOM定义了一套操作浏览器功能的API</li></ul> <h2 id="_02-获取页面元素"><a href="#_02-获取页面元素" class="header-anchor">#</a> 02-获取页面元素</h2> <ul><li>css语言如何获取页面元素？
+<ul><li>通过选择器
+<ul><li>id选择器 :  #id名</li> <li>类选择器: .类名</li> <li>标签选择器:标签名</li> <li>子代选择器:ul&gt;li</li> <li>后代选择器:ul li</li></ul></li></ul></li> <li>js语言如何获取元素页面元素？
+<ul><li>也是通过选择器</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        #box <span class="token punctuation">{</span>
+            background<span class="token operator">-</span>color<span class="token operator">:</span> green<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        #box1 <span class="token punctuation">{</span>
+            background<span class="token operator">-</span>color<span class="token operator">:</span> hotpink<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token punctuation">.</span>one <span class="token punctuation">{</span>
+            width<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span><span class="token operator">&gt;</span>mark<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box1&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span><span class="token operator">&gt;</span>马云<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span><span class="token operator">&gt;</span>pppp<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+        <span class="token comment">/* 
+            1. document.querySelector('css选择器')
+                a. 只能获取满足选择器条件的 第一个元素
+                b. 如果无法获取元素， 则会返回null
+
+            2. document.querySelectorAll('css选择器')
+                a. 可以获取满足选择器条件的 所有元素
+                b. 返回值一定是数组（伪数组）
+         */</span>
+
+        <span class="token comment">/**
+        * @description: 1. 根据选择器获取页面单个元素
+        * @param {type} ： css选择器字符串
+        * @return: 元素对象 | null
+        */</span>
+        <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.one'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//DOM元素对象 ： 对象类型数据，由于存储的是页面元素的数据，一般称之为DOM元素对象</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token comment">/**
+        * @description: 2. 根据选择器获取页面所有元素
+        * @param {type} ： css选择器字符串
+        * @return: 一定是数组（伪数组）
+        */</span>
+        <span class="token keyword">let</span> oneList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.one'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oneList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//伪数组：有数组三要素，没有数组的api</span>
+        <span class="token comment">// oneList.reverse();//程序报错</span>
+
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br></div></div><h2 id="_03-操作元素属性"><a href="#_03-操作元素属性" class="header-anchor">#</a> 03-操作元素属性</h2> <p><strong>1.1-元素属性操作</strong></p> <ul><li>1.语法：元素.属性名(其实就是对象的取值赋值语法)
+<ul><li>设置元素属性的值:元素.属性名 = 属性值</li></ul></li> <li>2.特点：
+<ul><li>1.class在js中是一个关键字，如果要拿到类名需要使用className</li> <li>2.只能获取到行内样式的属性值，无法得到行外(内联/外联)样式的属性值</li> <li>3.一定是一个字符串，例如：div.style.height得到150px 得到的是一个带单位的字符串</li> <li>4.如果css样式的属性有 -</li></ul></li> <li>例如background-color,margin-top,使用js获取和设置这些属性的时候需要使用驼峰命名(因为-符号不符合js的命名规范)</li> <li>例如:div.style.backgroundColor</li> <li>3.注意点：修改类名需要注意会覆盖掉原本的类样式，所以一般我们不会直接修改类名，而是在原先类名的基础上加 一个类，这里需要注意多个类名之间的空格
+<ul><li>例如：div.className += &quot; two&quot;;//字符串拼接添加类型，注意多个类名之间的空格</li></ul></li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> style<span class="token operator">=</span><span class="token string">&quot;width: 100px;height: 100px;background-color: red&quot;</span><span class="token operator">&gt;</span>我是班长<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是pp<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+            <span class="token comment">//需求：修改元素的颜色</span>
+    
+            <span class="token comment">//1.获取元素</span>
+            <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//2.操作元素的属性   ：对象的取值/赋值语法   (点语法 或 字符串语法)</span>
+    
+            <span class="token comment">//2.1 取值:  对象名.属性名</span>
+    
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//box</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//box</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//css样式属性对象</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&quot;100px&quot; 带单位字符串</span>
+    
+            <span class="token comment">//2.2 赋值：  对象名.属性名 = 值</span>
+    
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token string">'200px'</span><span class="token punctuation">;</span>
+    
+    
+            <span class="token comment">/*  
+            注意点：html属性带- ，background-  font- margin- padding-,在js中都需要转成驼峰命名法
+                a.驼峰命名法： （1）去掉- （2）将-后面的首字母变成大写
+                b.原因： - 不符合js命名规则
+            */</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token string">'20px'</span><span class="token punctuation">;</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'green'</span><span class="token punctuation">;</span>
+    
+        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><p>1.2-普通元素常用属性</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code> 语法                      	作用                                
+  元素<span class="token punctuation">.</span>id                   	获取id                              
+  元素<span class="token punctuation">.</span>className            	获取类名                              
+  元素<span class="token punctuation">.</span>innerText            	获取文本                              
+  元素<span class="token punctuation">.</span>href                 	获取链接（常用于a标签）                      
+  元素<span class="token punctuation">.</span>src                  	<span class="token function">获取路径</span><span class="token punctuation">(</span>常用于img标签<span class="token punctuation">)</span>                    
+  元素<span class="token punctuation">.</span>style                	<span class="token function">获取css样式对象</span><span class="token punctuation">(</span>获取的是一个对象类型，包含所有css熟悉<span class="token punctuation">)</span>   
+  元素<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor	获取css样式的颜色  （带<span class="token operator">-</span>的css样式，需要使用驼峰命名来获取）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> style<span class="token operator">=</span><span class="token string">&quot;width: 100px;height: 100px;background-color:red&quot;</span><span class="token operator">&gt;</span>我是班长<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">&quot;sp&quot;</span><span class="token operator">&gt;</span>我是span<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">&quot;#&quot;</span> target<span class="token operator">=</span><span class="token string">&quot;__blank&quot;</span><span class="token operator">&gt;</span>点我有惊喜<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">&quot;images/001.jpg&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>  
+    
+        <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+            <span class="token comment">//1.获取页面元素</span>
+            <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> sp <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#sp'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> a <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> img <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//2.html属性</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">/* 获取类名需要使用className，不能使用class，因为class是js关键字 */</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>className<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//innerText : 获取普通元素(双标签)的文本</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sp<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token comment">//href:a标签的链接</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            a<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">'http://www.itheima.com'</span><span class="token punctuation">;</span>
+            <span class="token comment">//src: img标签的图片链接</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>src<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//获取的是绝对路径</span>
+            img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'images/002.jpg'</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//2.css样式属性</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//获取的是一个对象，对象中存储的是元素的css样式属性</span>
+            
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'purple'</span><span class="token punctuation">;</span>
+            
+        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><p><strong>1.3-表单元素常用属性</strong></p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>  语法         	作用                      
+  元素<span class="token punctuation">.</span>value   	获取文本                    
+  元素<span class="token punctuation">.</span>disabled	获取禁用状态 （布尔类型）           
+  元素<span class="token punctuation">.</span>checked 	获取选中状态（用于radio<span class="token operator">/</span>checkbox）
+  元素<span class="token punctuation">.</span>selected	<span class="token function">获取选中状态</span><span class="token punctuation">(</span>用于option<span class="token punctuation">)</span>      
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 
+        <span class="token number">1.</span>html中表单元素有一种独有的属性，这种属性表示表单元素的两种不同的状态 
+            disabled <span class="token operator">:</span> <span class="token boolean">false</span><span class="token operator">:</span>可用   <span class="token boolean">true</span><span class="token operator">:</span>禁用 
+        <span class="token number">2.</span>在html中，写或者不写表示这两种状态。只要你没写<span class="token punctuation">,</span>默认值就是<span class="token boolean">false</span>。写上了，值就是<span class="token boolean">true</span>
+            checked<span class="token operator">:</span> <span class="token boolean">true</span><span class="token operator">:</span>选中  <span class="token boolean">false</span>：未选中   用于radio<span class="token operator">/</span>checkbox
+            selected<span class="token operator">:</span> <span class="token boolean">true</span>：选中  <span class="token boolean">false</span>：未选中  用于option
+
+        <span class="token number">3.</span>在js中，这类属性值是布尔类型。
+
+     <span class="token operator">--</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;text&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;请输入用户名&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;username&quot;</span> disabled<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;radio&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;男&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;sex&quot;</span> checked<span class="token operator">&gt;</span>男
+            <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;radio&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;女&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;sex&quot;</span><span class="token operator">&gt;</span>女
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;checkbox&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;确定&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;confirm&quot;</span> checked<span class="token operator">&gt;</span>商品<span class="token number">1</span>
+            <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;checkbox&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;取消&quot;</span> name<span class="token operator">=</span><span class="token string">&quot;confirm&quot;</span><span class="token operator">&gt;</span>商品<span class="token number">2</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>select name<span class="token operator">=</span><span class="token string">&quot;job&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;job&quot;</span> <span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span>前端<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span>安卓<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span>php<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>option<span class="token operator">&gt;</span><span class="token constant">UI</span><span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+
+        <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+            <span class="token comment">//1.获取元素</span>
+            <span class="token keyword">let</span> sexList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'[name=&quot;sex&quot;]'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">//2.获取元素选中状态</span>
+            <span class="token comment">/* 非常重要的注意点 
+                a. sexList是一个数组 [DOM对象1，DOM对象2]
+                b. 数组本身没有DOM对象属性
+                c. 数组中的每一个元素是一个DOM对象，所以需要通过下标先获取DOM对象
+             */</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sexList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token comment">//3.value:获取表单元素文本</span>
+            <span class="token keyword">let</span> username <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">/* 非常重要注意点
+                a. 获取普通元素文本：innerText
+                b. 获取表单元素文本: value
+             */</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>username<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//''  空字符串</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>username<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">// 请输入用户名</span>
+            
+        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br></div></div><p><strong>1.4-元素属性操作注意点</strong></p> <p><strong>注意点总结</strong></p> <ol><li>只能获取到行内样式的属性值，<strong>无法得到行外(内联/外联)样式的属性值</strong>
+2.获取的数据都是string字符串，带单位<br>
+3.既可以获取，也可以修改   （修改没有行内行外限制，可以修改任何属性）</li></ol> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code>
+<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>`typescript
+   <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    
+        <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+            <span class="token punctuation">.</span>one <span class="token punctuation">{</span>
+                border<span class="token operator">:</span> <span class="token number">10</span>px solid yellow<span class="token punctuation">;</span>
+                background<span class="token operator">-</span>color<span class="token operator">:</span> red<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+    
+            <span class="token punctuation">.</span>two <span class="token punctuation">{</span>
+                margin<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;one&quot;</span> style<span class="token operator">=</span><span class="token string">&quot;width: 100px;height: 100px;&quot;</span><span class="token operator">&gt;</span>我是班长<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是pp<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    
+        <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+            
+            <span class="token comment">/*学习目标：点语法操作元素样式的注意点
+                1.只能获取行内属性，无法获取行外属性
+                2.获取的数据都是string字符串，带单位
+                3.既可以获取，也可以修改 
+                    * 获取 ： 只能获取行内样式
+                    * 修改 ： 可以修改任何样式  
+             */</span>
+    
+            <span class="token comment">//获取元素</span>
+            <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//1.只能获取行内属性，无法获取行外属性</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//行内属性可以获取</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//行外  空字符串</span>
+    
+            <span class="token comment">//2.获取的数据都是string字符串，带单位</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">//100px</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token punctuation">(</span>box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//string</span>
+    
+            <span class="token comment">//3.既可以获取，也可以修改</span>
+            <span class="token comment">//修改操作没有行内和行外限制，可以修改任何属性</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token string">'500px'</span><span class="token punctuation">;</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'greenyellow'</span><span class="token punctuation">;</span>
+    
+            <span class="token comment">//4.修改类名也会修改元素样式</span>
+            <span class="token comment">//修改类名也会修改元素样式（覆盖原先样式）</span>
+            <span class="token comment">// box.className = 'two';</span>
+            <span class="token comment">//如果不希望覆盖，而是添加新的类名样式，则可以使用字符串连接符拼接多个类名</span>
+            box<span class="token punctuation">.</span>className <span class="token operator">+=</span> <span class="token string">' two'</span><span class="token punctuation">;</span>				<span class="token comment">//注意多个类名之间的空格</span>
+    
+        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><h2 id="_04-事件介绍及注册事件"><a href="#_04-事件介绍及注册事件" class="header-anchor">#</a> 04-事件介绍及注册事件</h2> <ul><li><strong>1.事件：js处理用户交互的一种机制</strong> <ul><li>交互：什么元素在什么时刻做什么事</li></ul></li> <li><strong>2.事件的三要素：组成事件的三要素</strong> <ul><li>事件源：什么元素（div p）</li> <li>事件类型：什么时刻（鼠标点击onclick 鼠标移入：onmouseover）</li> <li>事件处理函数：做什么事（一段代码：函数）</li></ul></li> <li><strong>3.注册事件:本质是给元素属性赋值</strong> <ul><li>事件源.事件类型 = 事件处理函数
+<ul><li>box.onclick = function(){}</li></ul></li></ul></li> <li><strong>4.事件工作原理</strong> <ul><li>a.事件在注册的时候，不会执行（函数在声明的时候不会执行）</li> <li>b.一旦元素注册事件之后，当用户触发了这个事件的时候，浏览器会自动捕捉到这个事件，然后帮我们调用元素对象的事件处理函数</li></ul></li> <li>5.页面中 任何元素 都可以注册 很多个事件(点击，移入等)</li></ul> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;box&quot;</span> style<span class="token operator">=</span><span class="token string">&quot;width: 100px;height: 100px;background-color:red&quot;</span><span class="token operator">&gt;</span>我是mark<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>p id<span class="token operator">=</span><span class="token string">&quot;p1&quot;</span><span class="token operator">&gt;</span>我是马云<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">//需求：修改div颜色</span>
+
+        <span class="token comment">//1.获取页面元素</span>
+        <span class="token keyword">let</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2.操作元素属性</span>
+        <span class="token comment">// box.style.backgroundColor = 'green';</span>
+
+        <span class="token comment">/* 
+        1.交互： 什么元素在什么时刻做什么事
+        2.事件： js处理用户交互的一种机制
+        3.事件三要素
+            (1)事件源：什么元素
+            (2)事件类型：什么时刻（onclick单击  ondblclick双击  onmouseover鼠标移入）
+            (3)事件处理函数：做什么事
+        3.注册事件:本质是对象赋值过程
+            事件源.事件类型 = 事件处理函数
+        4.事件工作原理
+            a.事件在注册的时候，不会执行（函数在声明的时候不会执行）
+            b.一旦元素注册事件之后，当用户触发了这个事件的时候，浏览器会自动捕捉到这个事件，然后帮我们调用元素对象的事件处理函数
+         */</span>
+
+        <span class="token comment">//鼠标单击</span>
+        <span class="token comment">//1.注册鼠标单击事件：注册的时候事件处理函数不会执行</span>
+        box<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你单击我了'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        
+        <span class="token comment">//2.当用户触发这个事件（单击）的时候，浏览器会捕捉到用户交互自动帮我们调用box对象的这个onclick方法</span>
+        <span class="token comment">/* 注意
+            a.手动调用对象的事件处理函数也可以执行（一般不需要）
+            b.原因：浏览器会捕捉用户交互 自动帮我们调用这个函数
+         */</span>
+        <span class="token comment">//box.onclick();</span>
+
+        <span class="token comment">//3.一些常用事件类型介绍</span>
+        
+        <span class="token comment">//鼠标移入</span>
+        box<span class="token punctuation">.</span><span class="token function-variable function">onmouseover</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'green'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//鼠标移出 : 页面上一个元素可以注册多个事件</span>
+        box<span class="token punctuation">.</span><span class="token function-variable function">onmouseout</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'pink'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//鼠标双击 ： 页面上每一个元素都可以注册事件</span>
+        <span class="token keyword">let</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'p1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//dblclick:双击</span>
+        p1<span class="token punctuation">.</span><span class="token function-variable function">ondblclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div><h2 id="_05-网页案例"><a href="#_05-网页案例" class="header-anchor">#</a> 05-网页案例</h2> <p><strong>1.1-实际开发思路介绍</strong></p> <ul><li>1.实际开发中，我们做某一个功能的时候，通常遵循以下分析思路
+<ul><li>（1）明确需求
+<ul><li>我们代码的意义是完成需求，如果连需求是什么都不清楚，从何谈实现？</li></ul></li> <li>（2）根据需求整理思路
+<ul><li>明确需求之后，应该根据需求理清代码思路</li> <li>磨刀不误砍柴工，如果敲代码想到一行写一行，思路很容易混乱，而且容易出现bug</li></ul></li> <li>（3）根据思路敲代码
+<ul><li>思路一旦清晰，敲代码就是一个代码熟练度问题，如果忘记了某个api，可以查阅资料或者以前的笔记</li></ul></li></ul></li> <li>2.如何来描述需求和整理思路
+<ul><li>网页的交互需求，其实就是事件，通常都三个大步骤`点击了(事件类型)什么元素（事件源），发生了什么事（事件处理）</li> <li>所以我们在整理思路的时候，应该从事件三要素触发</li></ul></li></ul> <p><strong>1.2-开关灯</strong></p> <p>效果预览</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Title<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;关灯&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;btn&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">/*本小节知识点：1.一个按钮实现两种功能用法
+    *2.获取body元素的简洁方式：document.body
+    * 3.细节：双标签使用innerText获取文本  单标签使用value获取文本
+     */</span>
+    <span class="token comment">//1.获取元素</span>
+    <span class="token keyword">let</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//2.注册事件</span>
+    btn<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//如何获取body元素？</span>
+        <span class="token comment">//（1）我们学习过的通过标签获取元素</span>
+        <span class="token comment">//let body = document.getElementsByTagName('body')[0];</span>
+        <span class="token comment">//(2)最常用的简洁方式：body标签本身具有唯一性，可以直接点语法获取</span>
+        <span class="token keyword">let</span> body <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">==</span> <span class="token string">'关灯'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+            body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background <span class="token operator">=</span> <span class="token string">'black'</span><span class="token punctuation">;</span>		<span class="token comment">//修改body的背景颜色为黑色</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'开灯'</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span><span class="token punctuation">{</span>
+
+            body<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>				<span class="token comment">//body默认背景颜色就是白色，不设置默认就是白色</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">'关灯'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p><strong>1.3-按钮禁用表单事件</strong></p> <p>效果预览</p> <p>需求分析：
+1.点击启用：设置所有的表单元素distabled属性false
+2.点击禁用：设置所有的表单元素distabled属性true</p> <p>思路分析：事件三要素
+1 获取元素：
+2 注册事件：
+3 事件处理：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string">&quot;ie=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;text&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;password&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;radio&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;checkbox&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;表单按钮&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>hr<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;qy&quot;</span><span class="token operator">&gt;</span>启用<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button id<span class="token operator">=</span><span class="token string">&quot;jy&quot;</span><span class="token operator">&gt;</span>禁用<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/*
+        1.分析需求(交互)：
+            1.点击启用按钮，设置每一个表单元素disabled属性为false
+            2.点击禁用按钮，设置每一个表单元素disabled属性为true
+        2.思路分析（事件三要素）
+            获取元素：事件源：
+            注册事件：事件类型
+            事件处理：
+        */</span>
+
+        <span class="token comment">//1.获取元素</span>
+        <span class="token keyword">let</span> qy <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#qy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> jy <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#jy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> inputList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2.注册事件</span>
+
+        <span class="token comment">//2.1 点击启用</span>
+        qy<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//3.事件处理:设置每一个表单元素disabled属性为false</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>inputList<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                inputList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//2.2 点击禁用</span>
+        jy<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//3.事件处理:设置每一个表单元素disabled属性为true</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>inputList<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                inputList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br></div></div><p><strong>1.4-二维码显示和隐藏</strong></p> <p>效果预览</p> <p>需求分析：
+鼠标移入小盒子：显示大盒子，设置大盒子display属性为block
+鼠标移出小盒子：隐藏大盒子，设置大盒子display属性为none
+思路分析：事件三要素
+1 获取元素：
+2 注册事件：
+3 事件处理：</p> <div class="language-typescript line-numbers-mode"><pre class="language-typescript"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>head lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        #small <span class="token punctuation">{</span>
+
+            width<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+            background<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">&quot;images/bgs.png&quot;</span><span class="token punctuation">)</span> no<span class="token operator">-</span>repeat <span class="token operator">-</span><span class="token number">159</span>px <span class="token operator">-</span><span class="token number">51</span>px<span class="token punctuation">;</span>
+
+            position<span class="token operator">:</span> fixed<span class="token punctuation">;</span>
+            top<span class="token operator">:</span> <span class="token number">40</span><span class="token operator">%</span><span class="token punctuation">;</span>
+            right<span class="token operator">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        #big <span class="token punctuation">{</span>
+
+            width<span class="token operator">:</span> <span class="token number">210</span>px<span class="token punctuation">;</span>
+            height<span class="token operator">:</span> <span class="token number">210</span>px<span class="token punctuation">;</span>
+            position<span class="token operator">:</span> absolute<span class="token punctuation">;</span>
+            left<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">210</span>px<span class="token punctuation">;</span>
+            display<span class="token operator">:</span> none<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        #big img <span class="token punctuation">{</span>
+
+            width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;small&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;big&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">&quot;images/hmewm.jpg&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+        <span class="token comment">/*
+        1.分析需求(交互)：
+            a.鼠标移入small盒子：显示大盒子：设置大盒子big的display为block
+            b.鼠标移出small盒子：隐藏大盒子：设置大盒子big的display为none
+        2.思路分析（事件三要素）
+            获取元素：事件源：
+            注册事件：事件类型
+            事件处理：
+        */</span>
+
+        <span class="token comment">//1.获取元素</span>
+        <span class="token keyword">let</span> small <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#small'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> big <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#big'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2.注册事件</span>
+
+        <span class="token comment">//2.1 鼠标移入small</span>
+        small<span class="token punctuation">.</span><span class="token function-variable function">onmouseover</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//3.事件处理:</span>
+            big<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'block'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//2.2 鼠标移出small</span>
+        small<span class="token punctuation">.</span><span class="token function-variable function">onmouseout</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//隐藏大盒子</span>
+            big<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'none'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blogs/jsmd/082701.html" class="prev">
+            内置对象的API
+          </a></span> <span class="next"><a href="/blogs/jsmd/082801.html">
+            排他思想
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082702.html#_01-webapi" class="sidebar-link reco-side-_01-webapi" data-v-70334359>01-WebApi</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082702.html#_02-获取页面元素" class="sidebar-link reco-side-_02-获取页面元素" data-v-70334359>02-获取页面元素</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082702.html#_03-操作元素属性" class="sidebar-link reco-side-_03-操作元素属性" data-v-70334359>03-操作元素属性</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082702.html#_04-事件介绍及注册事件" class="sidebar-link reco-side-_04-事件介绍及注册事件" data-v-70334359>04-事件介绍及注册事件</a></li><li class="level-2" data-v-70334359><a href="/blogs/jsmd/082702.html#_05-网页案例" class="sidebar-link reco-side-_05-网页案例" data-v-70334359>05-网页案例</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div></div><canvas id="Ribbon"></canvas><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.5df4eb50.js" defer></script><script src="/assets/js/3.15797152.js" defer></script><script src="/assets/js/1.06e244cb.js" defer></script><script src="/assets/js/38.68856c82.js" defer></script>
+  </body>
+</html>
